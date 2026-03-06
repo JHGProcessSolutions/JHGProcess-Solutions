@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function JHGProcessSolutionsWebsite() {
   const afspraakMailto =
     "mailto:info@jhgprocess-solutions.com?subject=Vrijblijvende%20afspraak%20aanvragen%20JHG%20Process%20Solutions";
@@ -27,7 +23,7 @@ export default function JHGProcessSolutionsWebsite() {
         "Automatische e-mailanalyse",
         "Urgentie en intentie herkennen",
         "Samenvattingen en conceptantwoorden",
-        "Routing naar juiste afdeling of vervolgactie",
+        "Routing naar de juiste afdeling of vervolgactie",
       ],
       featured: true,
     },
@@ -45,11 +41,6 @@ export default function JHGProcessSolutionsWebsite() {
     },
   ];
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <div className="min-h-screen bg-[#f4f7fb] text-slate-900">
       <header className="sticky top-0 z-50 border-b border-[#d9e4f2] bg-white/90 backdrop-blur">
@@ -58,7 +49,7 @@ export default function JHGProcessSolutionsWebsite() {
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHG Process Solutions"
-              className="h-20 w-auto"
+              className="h-24 w-auto"
             />
             <div>
               <div className="text-2xl font-semibold tracking-tight text-[#21467f]">
@@ -99,12 +90,7 @@ export default function JHGProcessSolutionsWebsite() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(63,137,203,0.14),_transparent_28%),radial-gradient(circle_at_left,_rgba(33,70,127,0.12),_transparent_25%)]" />
 
           <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.55 }}
-            >
+            <div>
               <div className="mb-4 inline-flex rounded-full border border-[#d9e4f2] bg-white px-3 py-1 text-sm text-slate-600 shadow-sm">
                 Voor bedrijven die slimmer willen werken met minder handmatig werk
               </div>
@@ -137,44 +123,28 @@ export default function JHGProcessSolutionsWebsite() {
               </div>
 
               <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {[
-                  {
-                    title: "A-Z",
-                    text: "Van invoer tot opvolging automatisch geregeld",
-                  },
-                  {
-                    title: "Tijdwinst",
-                    text: "Minder handmatig werk en minder fouten",
-                  },
-                  {
-                    title: "Schaalbaar",
-                    text: "Groeit mee met uw volume en processen",
-                  },
-                ].map((item, index) => (
-                  <motion.div
-                    key={item.title}
-                    variants={fadeUp}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 0.45, delay: 0.12 + index * 0.08 }}
-                    className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm"
-                  >
-                    <div className="text-2xl font-semibold text-[#21467f]">
-                      {item.title}
-                    </div>
-                    <div className="mt-1 text-sm text-slate-500">{item.text}</div>
-                  </motion.div>
-                ))}
+                <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
+                  <div className="text-2xl font-semibold text-[#21467f]">A-Z</div>
+                  <div className="mt-1 text-sm text-slate-500">
+                    Van invoer tot opvolging automatisch geregeld
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
+                  <div className="text-2xl font-semibold text-[#21467f]">Tijdwinst</div>
+                  <div className="mt-1 text-sm text-slate-500">
+                    Minder handmatig werk en minder fouten
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
+                  <div className="text-2xl font-semibold text-[#21467f]">Schaalbaar</div>
+                  <div className="mt-1 text-sm text-slate-500">
+                    Groeit mee met uw volume en processen
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="rounded-[2rem] border border-[#d9e4f2] bg-white p-6 shadow-xl shadow-[#d7e5f7]"
-            >
+            <div className="rounded-[2rem] border border-[#d9e4f2] bg-white p-6 shadow-xl shadow-[#d7e5f7]">
               <div className="rounded-[1.5rem] bg-[#21467f] p-6 text-white">
                 <div className="text-sm uppercase tracking-[0.2em] text-[#b7cae3]">
                   Workflow voorbeeld
@@ -189,35 +159,24 @@ export default function JHGProcessSolutionsWebsite() {
                     "Boekhouding, logging en opvolging worden bijgewerkt",
                     "Herinneringen en slimme inboxacties lopen vanzelf door",
                   ].map((step, index) => (
-                    <motion.div
+                    <div
                       key={step}
-                      variants={fadeUp}
-                      initial="hidden"
-                      animate="visible"
-                      transition={{ duration: 0.4, delay: 0.2 + index * 0.08 }}
                       className="flex items-start gap-4 rounded-2xl bg-white/10 p-4"
                     >
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-sm font-semibold text-[#21467f]">
                         {index + 1}
                       </div>
                       <div className="text-sm leading-6 text-slate-100">{step}</div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         <section id="diensten" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl"
-          >
+          <div className="max-w-3xl">
             <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
               Diensten
             </div>
@@ -229,80 +188,63 @@ export default function JHGProcessSolutionsWebsite() {
               combinatie van beide. De inrichting wordt afgestemd op uw bedrijf,
               werkwijze en volume.
             </p>
-          </motion.div>
+          </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            {[
-              {
-                label: "Facturatie automatisering",
-                title: "Van invoer tot verzending automatisch geregeld",
-                text:
-                  "Uw medewerkers vullen alleen een formulier in. Daarna loopt het hele proces automatisch door: opbouw van factuurregels, PDF generatie, verzending, boekhouding en opvolging.",
-                points: [
-                  "Facturen automatisch genereren",
-                  "PDF’s automatisch maken en verzenden",
-                  "Koppeling met boekhouding",
-                  "Automatische betalingsherinneringen",
-                  "Sneller betaald en minder handmatig werk",
-                ],
-              },
-              {
-                label: "Inbox automatisering",
-                title: "E-mails slimmer, sneller en consistenter verwerken",
-                text:
-                  "Binnenkomende e-mails worden automatisch geanalyseerd, gecategoriseerd en samengevat. Het systeem kan vervolgacties starten, routeren en conceptantwoorden voorbereiden.",
-                points: [
-                  "E-mails automatisch analyseren",
-                  "Urgentie en intentie herkennen",
-                  "Samenvattingen en conceptantwoorden",
-                  "Berichten naar de juiste plek routeren",
-                  "Snellere en consistentere communicatie",
-                ],
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm"
-              >
-                <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-                  {item.label}
-                </div>
-                <h3 className="mt-3 text-2xl font-semibold text-[#21467f]">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-slate-600">{item.text}</p>
-                <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                  {item.points.map((point) => (
-                    <li key={point}>• {point}</li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+            <div className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
+              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                Facturatie automatisering
+              </div>
+              <h3 className="mt-3 text-2xl font-semibold text-[#21467f]">
+                Van invoer tot verzending automatisch geregeld
+              </h3>
+              <p className="mt-4 text-slate-600">
+                Uw medewerkers vullen alleen een formulier in. Daarna loopt het hele proces
+                automatisch door: opbouw van factuurregels, PDF generatie, verzending,
+                boekhouding en opvolging.
+              </p>
+              <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                <li>• Facturen automatisch genereren</li>
+                <li>• PDF’s automatisch maken en verzenden</li>
+                <li>• Koppeling met boekhouding</li>
+                <li>• Automatische betalingsherinneringen</li>
+                <li>• Sneller betaald en minder handmatig werk</li>
+              </ul>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
+              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                Inbox automatisering
+              </div>
+              <h3 className="mt-3 text-2xl font-semibold text-[#21467f]">
+                E-mails slimmer, sneller en consistenter verwerken
+              </h3>
+              <p className="mt-4 text-slate-600">
+                Binnenkomende e-mails worden automatisch geanalyseerd, gecategoriseerd en
+                samengevat. Het systeem kan vervolgacties starten, routeren en
+                conceptantwoorden voorbereiden.
+              </p>
+              <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                <li>• E-mails automatisch analyseren</li>
+                <li>• Urgentie en intentie herkennen</li>
+                <li>• Samenvattingen en conceptantwoorden</li>
+                <li>• Berichten naar de juiste plek routeren</li>
+                <li>• Snellere en consistentere communicatie</li>
+              </ul>
+            </div>
           </div>
         </section>
 
         <section id="hoe-het-werkt" className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-3xl"
-            >
+            <div className="max-w-3xl">
               <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
                 Hoe het werkt
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
                 Eenvoudig voor uw team, krachtig achter de schermen.
               </h2>
-            </motion.div>
+            </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {[
@@ -322,23 +264,16 @@ export default function JHGProcessSolutionsWebsite() {
                   title: "4. Inzicht en controle",
                   text: "U houdt overzicht zonder losse handelingen, foutgevoelige stappen of vertraging.",
                 },
-              ].map((item, index) => (
-                <motion.div
+              ].map((item) => (
+                <div
                   key={item.title}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.45, delay: index * 0.08 }}
                   className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-6 shadow-sm"
                 >
                   <div className="text-lg font-semibold text-[#21467f]">
                     {item.title}
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">
-                    {item.text}
-                  </p>
-                </motion.div>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -359,35 +294,21 @@ export default function JHGProcessSolutionsWebsite() {
                 title: "Professionelere communicatie",
                 text: "Berichten worden consistenter en overzichtelijker opgevolgd zonder extra druk op het team.",
               },
-            ].map((item, index) => (
-              <motion.div
+            ].map((item) => (
+              <div
                 key={item.title}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
                 className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm"
               >
-                <h3 className="text-xl font-semibold text-[#21467f]">
-                  {item.title}
-                </h3>
+                <h3 className="text-xl font-semibold text-[#21467f]">{item.title}</h3>
                 <p className="mt-3 text-slate-600">{item.text}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
 
         <section id="pakketten" className="bg-[#21467f] py-20 text-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-3xl"
-            >
+            <div className="max-w-3xl">
               <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#b7cae3]">
                 Pakketten
               </div>
@@ -400,17 +321,12 @@ export default function JHGProcessSolutionsWebsite() {
                 bepaald op basis van uw situatie, volume, gewenste inrichting en
                 mate van support.
               </p>
-            </motion.div>
+            </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-3">
-              {packages.map((item, index) => (
-                <motion.div
+              {packages.map((item) => (
+                <div
                   key={item.name}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.45, delay: index * 0.08 }}
                   className={`rounded-[2rem] border p-8 shadow-sm ${
                     item.featured
                       ? "border-white bg-white text-slate-950"
@@ -445,21 +361,14 @@ export default function JHGProcessSolutionsWebsite() {
                       <li key={point}>• {point}</li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         <section id="afspraak" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.5 }}
-            className="grid gap-10 rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm lg:grid-cols-[1.2fr_0.8fr] lg:p-12"
-          >
+          <div className="grid gap-10 rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm lg:grid-cols-[1.2fr_0.8fr] lg:p-12">
             <div>
               <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
                 Vrijblijvende afspraak
@@ -502,7 +411,7 @@ export default function JHGProcessSolutionsWebsite() {
                 Vrijblijvende afspraak aanvragen
               </a>
             </form>
-          </motion.div>
+          </div>
         </section>
       </main>
 
@@ -512,7 +421,7 @@ export default function JHGProcessSolutionsWebsite() {
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHG Process Solutions"
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
             <div>
               <div className="font-medium text-[#21467f]">JHG Process Solutions</div>
