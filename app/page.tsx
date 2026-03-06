@@ -1,19 +1,18 @@
 export default function JHGProcessSolutionsWebsite() {
   const afspraakMailto =
-    "mailto:info@jhgprocess-solutions.com?subject=Vrijblijvende%20afspraak%20aanvragen%20JHG%20Process%20Solutions";
+    "mailto:info@jhgprocess-solutions.com?subject=Vrijblijvende%20afspraak%20aanvragen%20JHGProcess-Solutions";
 
   const packages = [
     {
       name: "Facturatie automatisering",
       description:
-        "Voor bedrijven die hun facturatieproces van invoer tot verzending en opvolging grotendeels automatisch willen laten verlopen.",
+        "Voor bedrijven die hun facturatieproces van invoer tot verzending en opvolging automatisch willen laten verlopen.",
       points: [
         "Automatische factuuropbouw",
         "PDF generatie en verzending",
         "Koppeling met boekhouding",
         "Betalingsherinneringen en opvolging",
       ],
-      featured: false,
     },
     {
       name: "Inbox automatisering",
@@ -25,7 +24,6 @@ export default function JHGProcessSolutionsWebsite() {
         "Samenvattingen en conceptantwoorden",
         "Routing naar de juiste afdeling of vervolgactie",
       ],
-      featured: true,
     },
     {
       name: "Combinatieoplossing",
@@ -37,7 +35,6 @@ export default function JHGProcessSolutionsWebsite() {
         "Inrichting op basis van uw proces",
         "Prijs op aanvraag en afgestemd op uw situatie",
       ],
-      featured: false,
     },
   ];
 
@@ -48,12 +45,12 @@ export default function JHGProcessSolutionsWebsite() {
           <div className="flex items-center gap-4">
             <img
               src="/LOGO - JHGProcess-Solutions.png"
-              alt="JHG Process Solutions"
-              className="h-24 w-auto"
+              alt="JHGProcess-Solutions"
+              className="h-28 w-auto"
             />
             <div>
               <div className="text-2xl font-semibold tracking-tight text-[#21467f]">
-                JHG Process Solutions
+                JHGProcess-Solutions
               </div>
               <div className="text-sm text-slate-500">
                 Automatisering van facturatie, inbox en klantcommunicatie
@@ -80,7 +77,7 @@ export default function JHGProcessSolutionsWebsite() {
             href={afspraakMailto}
             className="rounded-2xl bg-[#21467f] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
           >
-            Vrijblijvende afspraak
+            Vrijblijvende afspraak maken
           </a>
         </div>
       </header>
@@ -112,7 +109,7 @@ export default function JHGProcessSolutionsWebsite() {
                   href={afspraakMailto}
                   className="rounded-2xl bg-[#21467f] px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
                 >
-                  Plan een vrijblijvende afspraak
+                  Vrijblijvende afspraak maken
                 </a>
                 <a
                   href="#pakketten"
@@ -327,36 +324,18 @@ export default function JHGProcessSolutionsWebsite() {
               {packages.map((item) => (
                 <div
                   key={item.name}
-                  className={`rounded-[2rem] border p-8 shadow-sm ${
-                    item.featured
-                      ? "border-white bg-white text-slate-950"
-                      : "border-white/10 bg-white/10 text-white"
-                  }`}
+                  className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 text-slate-950 shadow-sm"
                 >
                   <div className="text-lg font-semibold">{item.name}</div>
-                  <p
-                    className={`mt-4 text-sm leading-6 ${
-                      item.featured ? "text-slate-600" : "text-slate-100"
-                    }`}
-                  >
+                  <p className="mt-4 text-sm leading-6 text-slate-600">
                     {item.description}
                   </p>
 
-                  <div
-                    className={`mt-6 rounded-2xl px-4 py-3 text-sm ${
-                      item.featured
-                        ? "bg-[#f4f7fb] text-[#21467f]"
-                        : "bg-white/10 text-white"
-                    }`}
-                  >
+                  <div className="mt-6 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
                     Prijs op aanvraag, afgestemd op uw bedrijf en wensen
                   </div>
 
-                  <ul
-                    className={`mt-6 space-y-3 text-sm ${
-                      item.featured ? "text-slate-700" : "text-slate-100"
-                    }`}
-                  >
+                  <ul className="mt-6 space-y-3 text-sm text-slate-700">
                     {item.points.map((point) => (
                       <li key={point}>• {point}</li>
                     ))}
@@ -408,7 +387,7 @@ export default function JHGProcessSolutionsWebsite() {
                 href={afspraakMailto}
                 className="inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
               >
-                Vrijblijvende afspraak aanvragen
+                Vrijblijvende afspraak maken
               </a>
             </form>
           </div>
@@ -420,15 +399,15 @@ export default function JHGProcessSolutionsWebsite() {
           <div className="flex items-center gap-3">
             <img
               src="/LOGO - JHGProcess-Solutions.png"
-              alt="JHG Process Solutions"
-              className="h-16 w-auto"
+              alt="JHGProcess-Solutions"
+              className="h-20 w-auto"
             />
             <div>
-              <div className="font-medium text-[#21467f]">JHG Process Solutions</div>
+              <div className="font-medium text-[#21467f]">JHGProcess-Solutions</div>
               <div>Automatisering van facturatie, inbox en klantcommunicatie</div>
             </div>
           </div>
-          <div>© 2026 JHG Process Solutions. Alle rechten voorbehouden.</div>
+          <div>© 2026 JHGProcess-Solutions. Alle rechten voorbehouden.</div>
         </div>
       </footer>
     </div>
