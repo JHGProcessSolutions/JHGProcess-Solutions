@@ -1,35 +1,52 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { ReactNode } from "react";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "JHG Process Solutions | Facturatie en inbox volledig geautomatiseerd",
+  metadataBase: new URL("https://jhgprocess-solutions.com"),
+  title: "JHGProcess-Solutions | Facturatie en inbox volledig geautomatiseerd",
   description:
-    "Automatiseer facturatie, inboxverwerking en klantcommunicatie met een slimme oplossing die wordt ingericht op uw proces en werkwijze.",
+    "JHGProcess-Solutions automatiseert facturatie, inboxverwerking en klantcommunicatie voor bedrijven.",
+  keywords: [
+    "JHGProcess-Solutions",
+    "JHGProcess Solutions",
+    "facturatie automatisering",
+    "inbox automatisering",
+    "klantcommunicatie automatisering",
+    "workflow automatisering",
+  ],
+  applicationName: "JHGProcess-Solutions",
+  openGraph: {
+    title: "JHGProcess-Solutions",
+    description:
+      "Automatisering van facturatie, inbox en klantcommunicatie.",
+    url: "https://jhgprocess-solutions.com",
+    siteName: "JHGProcess-Solutions",
+    locale: "nl_NL",
+    type: "website",
+    images: [
+      {
+        url: "/LOGO - JHGProcess-Solutions.png",
+        width: 1200,
+        height: 630,
+        alt: "JHGProcess-Solutions",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: ReactNode;
+}) {
   return (
     <html lang="nl">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

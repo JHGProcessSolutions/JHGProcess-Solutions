@@ -1,6 +1,29 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
+type FormState = {
+  company: string;
+  name: string;
+  email: string;
+  message: string;
+};
+
+type ApiResponse = {
+  success?: boolean;
+  error?: string;
+};
+
 export default function JHGProcessSolutionsWebsite() {
-  const afspraakMailto =
-    "mailto:info@jhgprocess-solutions.com?subject=Vrijblijvende%20afspraak%20aanvragen%20JHGProcess-Solutions";
+  const [form, setForm] = useState<FormState>({
+    company: "",
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const packages = [
     {
@@ -38,6 +61,40 @@ export default function JHGProcessSolutionsWebsite() {
     },
   ];
 
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("");
+    setIsSending(true);
+
+    try {
+      const response = await fetch("/api/afspraak", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data: ApiResponse = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Er ging iets mis.");
+      }
+
+      setStatus("Bedankt! Uw aanvraag is verzonden. We nemen snel contact met u op.");
+      setForm({
+        company: "",
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      setStatus("Er ging iets mis bij het verzenden. Probeer het opnieuw.");
+    } finally {
+      setIsSending(false);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[#f4f7fb] text-slate-900">
       <header className="sticky top-0 z-50 border-b border-[#d9e4f2] bg-white/90 backdrop-blur">
@@ -46,7 +103,7 @@ export default function JHGProcessSolutionsWebsite() {
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHGProcess-Solutions"
-              className="h-28 w-auto"
+              className="h-16 w-auto sm:h-20"
             />
             <div>
               <div className="text-2xl font-semibold tracking-tight text-[#21467f]">
@@ -74,7 +131,7 @@ export default function JHGProcessSolutionsWebsite() {
           </nav>
 
           <a
-            href={afspraakMailto}
+            href="#afspraak"
             className="rounded-2xl bg-[#21467f] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
           >
             Vrijblijvende afspraak maken
@@ -106,7 +163,7 @@ export default function JHGProcessSolutionsWebsite() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href={afspraakMailto}
+                  href="#afspraak"
                   className="rounded-2xl bg-[#21467f] px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
                 >
                   Vrijblijvende afspraak maken
@@ -202,7 +259,7 @@ export default function JHGProcessSolutionsWebsite() {
               </p>
               <ul className="mt-6 space-y-3 text-sm text-slate-700">
                 <li>• Facturen automatisch genereren</li>
-                <li>• PDF’s automatisch maken en verzenden</li>
+                <li>• PDF&apos;s automatisch maken en verzenden</li>
                 <li>• Koppeling met boekhouding</li>
                 <li>• Automatische betalingsherinneringen</li>
                 <li>• Sneller betaald en minder handmatig werk</li>
@@ -362,33 +419,49 @@ export default function JHGProcessSolutionsWebsite() {
               </p>
             </div>
 
-            <form className="grid gap-4">
+            <form onSubmit={handleSubmit} className="grid gap-4">
               <input
                 type="text"
                 placeholder="Bedrijfsnaam"
+                value={form.company}
+                onChange={(e) => setForm({ ...form, company: e.target.value })}
                 className="rounded-2xl border border-[#c8d8ec] px-4 py-3 outline-none transition focus:border-[#21467f]"
+                required
               />
               <input
                 type="text"
                 placeholder="Naam"
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="rounded-2xl border border-[#c8d8ec] px-4 py-3 outline-none transition focus:border-[#21467f]"
+                required
               />
               <input
                 type="email"
                 placeholder="E-mailadres"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="rounded-2xl border border-[#c8d8ec] px-4 py-3 outline-none transition focus:border-[#21467f]"
+                required
               />
               <textarea
                 placeholder="Vertel kort waar momenteel de meeste tijd in gaat zitten"
                 rows={5}
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="rounded-2xl border border-[#c8d8ec] px-4 py-3 outline-none transition focus:border-[#21467f]"
+                required
               />
-              <a
-                href={afspraakMailto}
-                className="inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
+
+              <button
+                type="submit"
+                disabled={isSending}
+                className="inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb] disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Vrijblijvende afspraak maken
-              </a>
+                {isSending ? "Versturen..." : "Vrijblijvende afspraak maken"}
+              </button>
+
+              {status ? <p className="text-sm text-slate-600">{status}</p> : null}
             </form>
           </div>
         </section>
@@ -400,7 +473,7 @@ export default function JHGProcessSolutionsWebsite() {
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHGProcess-Solutions"
-              className="h-20 w-auto"
+              className="h-16 w-auto"
             />
             <div>
               <div className="font-medium text-[#21467f]">JHGProcess-Solutions</div>
