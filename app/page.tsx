@@ -98,13 +98,13 @@ export default function JHGProcessSolutionsWebsite() {
 
   return (
     <div className="min-h-screen bg-[#f4f7fb] text-slate-900">
-      <header className="sticky top-0 z-50 border-b border-[#d9e4f2] bg-white/90 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-[#d9e4f2] bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <div className="flex items-center gap-4">
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHGProcess-Solutions"
-              className="h-16 w-auto sm:h-20"
+              className="h-12 w-auto sm:h-14"
             />
             <div>
               <div className="text-2xl font-semibold tracking-tight text-[#21467f]">
@@ -120,26 +120,23 @@ export default function JHGProcessSolutionsWebsite() {
             <a href="#diensten" className="transition hover:text-[#21467f]">
               Diensten
             </a>
-            <a href="#problemen" className="transition hover:text-[#21467f]">
-              Herkenbaar?
-            </a>
             <a href="#hoe-het-werkt" className="transition hover:text-[#21467f]">
               Hoe het werkt
             </a>
             <a href="#voordelen" className="transition hover:text-[#21467f]">
               Voordelen
             </a>
+            <a href="#pakketten" className="transition hover:text-[#21467f]">
+              Pakketten
+            </a>
             <a href="#over-ons" className="transition hover:text-[#21467f]">
               Over ons
-            </a>
-            <a href="#afspraak" className="transition hover:text-[#21467f]">
-              Afspraak
             </a>
           </nav>
 
           <a
             href="#afspraak"
-            className="rounded-2xl bg-[#21467f] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
+            className="rounded-2xl bg-[#21467f] px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
           >
             Vrijblijvende afspraak maken
           </a>
@@ -230,13 +227,6 @@ export default function JHGProcessSolutionsWebsite() {
                     </div>
                   ))}
                 </div>
-
-                <a
-                  href="#afspraak"
-                  className="mt-6 inline-block rounded-2xl bg-white px-5 py-3 text-sm font-medium text-[#21467f] transition hover:bg-slate-100"
-                >
-                  Plan een vrijblijvende afspraak
-                </a>
               </div>
             </div>
           </div>
@@ -271,15 +261,6 @@ export default function JHGProcessSolutionsWebsite() {
                   <p className="text-sm leading-7 text-slate-700">{item}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-10">
-              <a
-                href="#afspraak"
-                className="inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
-              >
-                Bekijk wat automatisering voor uw bedrijf kan doen
-              </a>
             </div>
           </div>
         </section>
@@ -342,15 +323,6 @@ export default function JHGProcessSolutionsWebsite() {
               </ul>
             </div>
           </div>
-
-          <div className="mt-10">
-            <a
-              href="#afspraak"
-              className="inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
-            >
-              Plan een vrijblijvend gesprek
-            </a>
-          </div>
         </section>
 
         <section id="hoe-het-werkt" className="bg-white py-20">
@@ -397,15 +369,6 @@ export default function JHGProcessSolutionsWebsite() {
                   <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-10">
-              <a
-                href="#afspraak"
-                className="inline-block rounded-2xl border border-[#21467f] px-6 py-3 text-sm font-medium text-[#21467f] transition hover:bg-[#21467f] hover:text-white"
-              >
-                Bespreek uw huidige proces
-              </a>
             </div>
           </div>
         </section>
@@ -454,12 +417,6 @@ export default function JHGProcessSolutionsWebsite() {
               inbox automatisering of klantmails automatisering: het doel is altijd hetzelfde.
               Minder losse handelingen, meer snelheid en een proces dat beter schaalbaar wordt.
             </p>
-            <a
-              href="#afspraak"
-              className="mt-6 inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
-            >
-              Ontdek wat het oplevert voor uw bedrijf
-            </a>
           </div>
         </section>
 
@@ -502,15 +459,6 @@ export default function JHGProcessSolutionsWebsite() {
                   </ul>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-10">
-              <a
-                href="#afspraak"
-                className="inline-block rounded-2xl bg-white px-6 py-3 text-sm font-medium text-[#21467f] shadow-sm transition hover:bg-slate-100"
-              >
-                Vraag vrijblijvend naar de mogelijkheden
-              </a>
             </div>
           </div>
         </section>
