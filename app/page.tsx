@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 
 type FormState = {
@@ -88,7 +89,7 @@ export default function JHGProcessSolutionsWebsite() {
         email: "",
         message: "",
       });
-    } catch (error) {
+    } catch {
       setStatus("Er ging iets mis bij het verzenden. Probeer het opnieuw.");
     } finally {
       setIsSending(false);
@@ -110,7 +111,7 @@ export default function JHGProcessSolutionsWebsite() {
                 JHGProcess-Solutions
               </div>
               <div className="text-sm text-slate-500">
-                Automatisering van facturatie, inbox en klantcommunicatie
+                Facturatie automatisering, inbox automatisering en klantmails automatisering
               </div>
             </div>
           </div>
@@ -119,11 +120,17 @@ export default function JHGProcessSolutionsWebsite() {
             <a href="#diensten" className="transition hover:text-[#21467f]">
               Diensten
             </a>
+            <a href="#problemen" className="transition hover:text-[#21467f]">
+              Herkenbaar?
+            </a>
             <a href="#hoe-het-werkt" className="transition hover:text-[#21467f]">
               Hoe het werkt
             </a>
-            <a href="#pakketten" className="transition hover:text-[#21467f]">
-              Pakketten
+            <a href="#voordelen" className="transition hover:text-[#21467f]">
+              Voordelen
+            </a>
+            <a href="#over-ons" className="transition hover:text-[#21467f]">
+              Over ons
             </a>
             <a href="#afspraak" className="transition hover:text-[#21467f]">
               Afspraak
@@ -146,19 +153,18 @@ export default function JHGProcessSolutionsWebsite() {
           <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
             <div>
               <div className="mb-4 inline-flex rounded-full border border-[#d9e4f2] bg-white px-3 py-1 text-sm text-slate-600 shadow-sm">
-                Voor bedrijven die slimmer willen werken met minder handmatig werk
+                Slimme automatisering voor bedrijven die minder handmatig werk willen
               </div>
 
-              <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-[#21467f] sm:text-5xl lg:text-6xl">
-                Facturatie en inbox volledig geautomatiseerd.
+              <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-[#21467f] sm:text-5xl lg:text-6xl">
+                Automatiseer uw facturatie, inbox en klantmails.
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Automatiseer terugkerende processen rondom facturatie,
-                inboxverwerking en klantcommunicatie. Uw team hoeft alleen nog
-                maar een formulier in te vullen of een e-mail binnen te krijgen.
-                Daarna regelt het systeem automatisch de rest: van verwerking en
-                opvolging tot verzending, samenvattingen en slimme workflow-acties.
+                JHGProcess-Solutions helpt bedrijven met facturatie automatisering,
+                Moneybird automatisering, inbox automatisering en klantmails automatisering.
+                Zo bespaart uw team tijd, worden processen sneller opgevolgd en neemt
+                handmatig werk sterk af.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -169,30 +175,30 @@ export default function JHGProcessSolutionsWebsite() {
                   Vrijblijvende afspraak maken
                 </a>
                 <a
-                  href="#pakketten"
+                  href="#diensten"
                   className="rounded-2xl border border-[#b7cae3] px-6 py-3 text-center text-sm font-medium text-[#21467f] transition hover:border-[#3f89cb] hover:text-[#3f89cb]"
                 >
-                  Bekijk mogelijkheden
+                  Bekijk onze oplossingen
                 </a>
               </div>
 
               <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
-                  <div className="text-2xl font-semibold text-[#21467f]">A-Z</div>
+                  <div className="text-2xl font-semibold text-[#21467f]">Minder werk</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Van invoer tot opvolging automatisch geregeld
+                    Minder handmatige taken en minder fouten
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
-                  <div className="text-2xl font-semibold text-[#21467f]">Tijdwinst</div>
+                  <div className="text-2xl font-semibold text-[#21467f]">Sneller</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Minder handmatig werk en minder fouten
+                    Facturen en e-mails sneller verwerkt en opgevolgd
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
                   <div className="text-2xl font-semibold text-[#21467f]">Schaalbaar</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Groeit mee met uw volume en processen
+                    Een oplossing die meegroeit met uw bedrijf
                   </div>
                 </div>
               </div>
@@ -224,7 +230,56 @@ export default function JHGProcessSolutionsWebsite() {
                     </div>
                   ))}
                 </div>
+
+                <a
+                  href="#afspraak"
+                  className="mt-6 inline-block rounded-2xl bg-white px-5 py-3 text-sm font-medium text-[#21467f] transition hover:bg-slate-100"
+                >
+                  Plan een vrijblijvende afspraak
+                </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="problemen" className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                Herkenbaar?
+              </div>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
+                Veel bedrijven verliezen ongemerkt uren per week aan terugkerend handmatig werk.
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                Juist in facturatie, inboxverwerking en klantmails gaat vaak onnodig veel tijd
+                verloren. Dat vertraagt opvolging, verhoogt de foutkans en kost capaciteit.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {[
+                "Facturen worden nog handmatig opgebouwd of gecontroleerd",
+                "Klantmails blijven liggen of worden niet consistent opgevolgd",
+                "Inboxverwerking kost veel tijd en vraagt steeds opnieuw aandacht",
+                "Er gaat tijd verloren aan losse stappen, controles en opvolging",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-6 shadow-sm"
+                >
+                  <p className="text-sm leading-7 text-slate-700">{item}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10">
+              <a
+                href="#afspraak"
+                className="inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
+              >
+                Bekijk wat automatisering voor uw bedrijf kan doen
+              </a>
             </div>
           </div>
         </section>
@@ -235,11 +290,11 @@ export default function JHGProcessSolutionsWebsite() {
               Diensten
             </div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-              Eén slimme oplossing voor facturatie en inboxverwerking.
+              Oplossingen voor facturatie automatisering, inbox automatisering en klantmails automatisering.
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              U kiest voor alleen facturatie, alleen inbox automatisering of een
-              combinatie van beide. De inrichting wordt afgestemd op uw bedrijf,
+              U kiest voor alleen facturatie automatisering, alleen inbox automatisering
+              of een combinatie van beide. De oplossing wordt afgestemd op uw proces,
               werkwijze en volume.
             </p>
           </div>
@@ -253,16 +308,16 @@ export default function JHGProcessSolutionsWebsite() {
                 Van invoer tot verzending automatisch geregeld
               </h3>
               <p className="mt-4 text-slate-600">
-                Uw medewerkers vullen alleen een formulier in. Daarna loopt het hele proces
+                Uw medewerkers vullen alleen een formulier in. Daarna loopt het proces
                 automatisch door: opbouw van factuurregels, PDF generatie, verzending,
-                boekhouding en opvolging.
+                boekhouding en opvolging. Ideaal voor bedrijven die facturen willen automatiseren.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-slate-700">
                 <li>• Facturen automatisch genereren</li>
                 <li>• PDF&apos;s automatisch maken en verzenden</li>
-                <li>• Koppeling met boekhouding</li>
+                <li>• Koppeling met boekhouding of Moneybird automatisering</li>
                 <li>• Automatische betalingsherinneringen</li>
-                <li>• Sneller betaald en minder handmatig werk</li>
+                <li>• Minder handmatig werk en sneller betaald</li>
               </ul>
             </div>
 
@@ -276,7 +331,7 @@ export default function JHGProcessSolutionsWebsite() {
               <p className="mt-4 text-slate-600">
                 Binnenkomende e-mails worden automatisch geanalyseerd, gecategoriseerd en
                 samengevat. Het systeem kan vervolgacties starten, routeren en
-                conceptantwoorden voorbereiden.
+                conceptantwoorden voorbereiden. Zo wordt klantmails automatisering direct praktisch inzetbaar.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-slate-700">
                 <li>• E-mails automatisch analyseren</li>
@@ -286,6 +341,15 @@ export default function JHGProcessSolutionsWebsite() {
                 <li>• Snellere en consistentere communicatie</li>
               </ul>
             </div>
+          </div>
+
+          <div className="mt-10">
+            <a
+              href="#afspraak"
+              className="inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
+            >
+              Plan een vrijblijvend gesprek
+            </a>
           </div>
         </section>
 
@@ -298,6 +362,10 @@ export default function JHGProcessSolutionsWebsite() {
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
                 Eenvoudig voor uw team, krachtig achter de schermen.
               </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                De werkwijze blijft eenvoudig voor uw medewerkers, terwijl op de achtergrond
+                automatisering het proces overneemt.
+              </p>
             </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -330,11 +398,29 @@ export default function JHGProcessSolutionsWebsite() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-10">
+              <a
+                href="#afspraak"
+                className="inline-block rounded-2xl border border-[#21467f] px-6 py-3 text-sm font-medium text-[#21467f] transition hover:bg-[#21467f] hover:text-white"
+              >
+                Bespreek uw huidige proces
+              </a>
+            </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-3">
+        <section id="voordelen" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+              Wat levert het op?
+            </div>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
+              Minder administratie, snellere opvolging en meer rust in uw processen.
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
             {[
               {
                 title: "Minder administratie",
@@ -345,8 +431,8 @@ export default function JHGProcessSolutionsWebsite() {
                 text: "Facturen, e-mails en vervolgstappen worden sneller verwerkt zonder vertraging.",
               },
               {
-                title: "Professionelere communicatie",
-                text: "Berichten worden consistenter en overzichtelijker opgevolgd zonder extra druk op het team.",
+                title: "Minder fouten",
+                text: "Door minder handmatige stappen daalt de kans op fouten en blijft het proces consistenter.",
               },
             ].map((item) => (
               <div
@@ -357,6 +443,23 @@ export default function JHGProcessSolutionsWebsite() {
                 <p className="mt-3 text-slate-600">{item.text}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
+            <h3 className="text-2xl font-semibold text-[#21467f]">
+              Voor bedrijven die facturen willen automatiseren en klantmails slimmer willen afhandelen
+            </h3>
+            <p className="mt-4 max-w-4xl text-slate-600">
+              Of het nu gaat om facturatie automatisering, Moneybird automatisering,
+              inbox automatisering of klantmails automatisering: het doel is altijd hetzelfde.
+              Minder losse handelingen, meer snelheid en een proces dat beter schaalbaar wordt.
+            </p>
+            <a
+              href="#afspraak"
+              className="mt-6 inline-block rounded-2xl bg-[#21467f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
+            >
+              Ontdek wat het oplevert voor uw bedrijf
+            </a>
           </div>
         </section>
 
@@ -400,6 +503,42 @@ export default function JHGProcessSolutionsWebsite() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-10">
+              <a
+                href="#afspraak"
+                className="inline-block rounded-2xl bg-white px-6 py-3 text-sm font-medium text-[#21467f] shadow-sm transition hover:bg-slate-100"
+              >
+                Vraag vrijblijvend naar de mogelijkheden
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="over-ons" className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-10 rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm lg:grid-cols-2 lg:p-12">
+              <div>
+                <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                  Over ons
+                </div>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
+                  Praktische automatisering die direct tijd oplevert.
+                </h2>
+              </div>
+              <div className="text-slate-600">
+                <p className="leading-8">
+                  JHGProcess-Solutions helpt bedrijven met het automatiseren van
+                  facturatie, inboxverwerking en klantcommunicatie. Wij bouwen
+                  oplossingen die terugkerend werk verminderen, opvolging versnellen
+                  en processen overzichtelijker maken.
+                </p>
+                <p className="mt-4 leading-8">
+                  Geen onnodig ingewikkelde trajecten, maar praktische automatisering
+                  die aansluit op uw werkwijze en direct waarde toevoegt in de dagelijkse praktijk.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -413,10 +552,24 @@ export default function JHGProcessSolutionsWebsite() {
                 Ontdek in een kort gesprek wat automatisering voor uw bedrijf kan opleveren.
               </h2>
               <p className="mt-4 max-w-2xl text-lg text-slate-600">
-                In een vrijblijvende afspraak kijken we samen waar de meeste
-                tijd verloren gaat in facturatie, inboxverwerking en
-                klantcommunicatie — en waar de grootste winst te behalen valt.
+                In een vrijblijvende afspraak kijken we samen waar de meeste tijd verloren
+                gaat in facturatie, inboxverwerking en klantmails — en waar de grootste winst te behalen valt.
               </p>
+
+              <div className="mt-8 space-y-3 text-sm text-slate-600">
+                <p>
+                  <span className="font-semibold text-[#21467f]">E-mail:</span>{" "}
+                  info@jhgprocess-solutions.com
+                </p>
+                <p>
+                  <span className="font-semibold text-[#21467f]">Telefoon:</span>{" "}
+                  +31 646341101
+                </p>
+                <p>
+                  <span className="font-semibold text-[#21467f]">Plaats:</span>{" "}
+                  Roosendaal
+                </p>
+              </div>
             </div>
 
             <form onSubmit={handleSubmit} className="grid gap-4">
@@ -468,8 +621,8 @@ export default function JHGProcessSolutionsWebsite() {
       </main>
 
       <footer className="border-t border-[#d9e4f2] bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div className="flex items-center gap-3">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 text-sm text-slate-500 lg:grid-cols-3 lg:px-8">
+          <div className="flex items-start gap-3">
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHGProcess-Solutions"
@@ -477,10 +630,43 @@ export default function JHGProcessSolutionsWebsite() {
             />
             <div>
               <div className="font-medium text-[#21467f]">JHGProcess-Solutions</div>
-              <div>Automatisering van facturatie, inbox en klantcommunicatie</div>
+              <div className="mt-1">
+                Facturatie automatisering, inbox automatisering en klantmails automatisering
+              </div>
             </div>
           </div>
-          <div>© 2026 JHGProcess-Solutions. Alle rechten voorbehouden.</div>
+
+          <div>
+            <div className="font-medium text-[#21467f]">Contact</div>
+            <div className="mt-2 space-y-2">
+              <div>info@jhgprocess-solutions.com</div>
+              <div>+31 646341101</div>
+              <div>Roosendaal</div>
+            </div>
+          </div>
+
+          <div>
+            <div className="font-medium text-[#21467f]">Informatie</div>
+            <div className="mt-2 space-y-2">
+              <div>
+                <Link href="/privacy" className="transition hover:text-[#21467f]">
+                  Privacy Policy
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/algemene-voorwaarden"
+                  className="transition hover:text-[#21467f]"
+                >
+                  Algemene voorwaarden
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-[#d9e4f2] px-6 py-5 text-center text-sm text-slate-500 lg:px-8">
+          © 2026 JHGProcess-Solutions. Alle rechten voorbehouden.
         </div>
       </footer>
     </div>

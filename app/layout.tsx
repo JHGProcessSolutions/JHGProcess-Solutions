@@ -3,24 +3,36 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jhgprocess-solutions.com"),
-  title: "JHGProcess-Solutions | Facturatie en inbox volledig geautomatiseerd",
+  metadataBase: new URL("https://www.jhgprocess-solutions.com"),
+  title: {
+    default: "JHGProcess-Solutions | Facturatie automatisering en inbox automatisering",
+    template: "%s | JHGProcess-Solutions",
+  },
   description:
-    "JHGProcess-Solutions automatiseert facturatie, inboxverwerking en klantcommunicatie voor bedrijven.",
+    "JHGProcess-Solutions helpt bedrijven met facturatie automatisering, Moneybird automatisering, inbox automatisering en klantmails automatisering.",
   keywords: [
     "JHGProcess-Solutions",
     "JHGProcess Solutions",
     "facturatie automatisering",
+    "Moneybird automatisering",
+    "facturen automatiseren mkb",
     "inbox automatisering",
-    "klantcommunicatie automatisering",
+    "klantmails automatisering",
     "workflow automatisering",
+    "administratie automatisering",
   ],
   applicationName: "JHGProcess-Solutions",
+  authors: [{ name: "JHGProcess-Solutions" }],
+  creator: "JHGProcess-Solutions",
+  publisher: "JHGProcess-Solutions",
+  alternates: {
+    canonical: "https://www.jhgprocess-solutions.com",
+  },
   openGraph: {
-    title: "JHGProcess-Solutions",
+    title: "JHGProcess-Solutions | Facturatie automatisering en inbox automatisering",
     description:
-      "Automatisering van facturatie, inbox en klantcommunicatie.",
-    url: "https://jhgprocess-solutions.com",
+      "Automatiseer facturatie, inboxverwerking en klantmails met JHGProcess-Solutions.",
+    url: "https://www.jhgprocess-solutions.com",
     siteName: "JHGProcess-Solutions",
     locale: "nl_NL",
     type: "website",
@@ -36,6 +48,18 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
