@@ -123,9 +123,6 @@ export default function JHGProcessSolutionsWebsite() {
             <a href="#hoe-het-werkt" className="transition hover:text-[#21467f]">
               Hoe het werkt
             </a>
-            <a href="#voordelen" className="transition hover:text-[#21467f]">
-              Voordelen
-            </a>
             <a href="#pakketten" className="transition hover:text-[#21467f]">
               Pakketten
             </a>
