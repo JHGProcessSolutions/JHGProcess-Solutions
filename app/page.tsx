@@ -104,7 +104,7 @@ export default function JHGProcessSolutionsWebsite() {
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHGProcess-Solutions"
-              className="h-[26px] w-auto sm:h-[34px]"
+              className="h-26 w-auto sm:h-34"
             />
             <div className="min-w-0">
               <div className="text-2xl font-semibold tracking-tight text-[#21467f]">
@@ -571,7 +571,7 @@ export default function JHGProcessSolutionsWebsite() {
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHGProcess-Solutions"
-              className="h-[34px] w-auto"
+              className="h-34 w-auto"
             />
             <div>
               <div className="font-medium text-[#21467f]">JHGProcess-Solutions</div>
