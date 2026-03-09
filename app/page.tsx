@@ -99,14 +99,14 @@ export default function JHGProcessSolutionsWebsite() {
   return (
     <div className="min-h-screen bg-[#f4f7fb] text-slate-900">
       <header className="sticky top-0 z-50 border-b border-[#d9e4f2] bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div className="flex items-center gap-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
+          <div className="flex min-w-0 items-center gap-4">
             <img
               src="/LOGO - JHGProcess-Solutions.png"
               alt="JHGProcess-Solutions"
               className="h-26 w-auto sm:h-34"
             />
-            <div>
+            <div className="min-w-0">
               <div className="text-2xl font-semibold tracking-tight text-[#21467f]">
                 JHGProcess-Solutions
               </div>
@@ -116,7 +116,7 @@ export default function JHGProcessSolutionsWebsite() {
             </div>
           </div>
 
-          <nav className="hidden gap-8 text-sm text-slate-600 md:flex">
+          <nav className="hidden items-center gap-7 text-sm text-slate-600 md:flex">
             <a href="#diensten" className="transition hover:text-[#21467f]">
               Diensten
             </a>
@@ -133,7 +133,7 @@ export default function JHGProcessSolutionsWebsite() {
 
           <a
             href="#afspraak"
-            className="rounded-2xl bg-[#21467f] px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
+            className="shrink-0 rounded-2xl bg-[#21467f] px-4 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#3f89cb]"
           >
             Vrijblijvende afspraak maken
           </a>
