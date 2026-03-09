@@ -156,7 +156,7 @@ export default function JHGProcessSolutionsWebsite() {
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
                 JHGProcess-Solutions helpt bedrijven met facturatie automatisering,
-                Moneybird automatisering, inbox automatisering en klantmails automatisering.
+                moneybird automatisering, facturen automatiseren mkb en inbox automatisering.
                 Zo bespaart uw team tijd, worden processen sneller opgevolgd en neemt
                 handmatig werk sterk af.
               </p>
@@ -293,7 +293,7 @@ export default function JHGProcessSolutionsWebsite() {
               <ul className="mt-6 space-y-3 text-sm text-slate-700">
                 <li>• Facturen automatisch genereren</li>
                 <li>• PDF&apos;s automatisch maken en verzenden</li>
-                <li>• Koppeling met boekhouding of Moneybird automatisering</li>
+                <li>• Koppeling met boekhouding of moneybird automatisering</li>
                 <li>• Automatische betalingsherinneringen</li>
                 <li>• Minder handmatig werk en sneller betaald</li>
               </ul>
@@ -309,7 +309,7 @@ export default function JHGProcessSolutionsWebsite() {
               <p className="mt-4 text-slate-600">
                 Binnenkomende e-mails worden automatisch geanalyseerd, gecategoriseerd en
                 samengevat. Het systeem kan vervolgacties starten, routeren en
-                conceptantwoorden voorbereiden. Zo wordt klantmails automatisering direct praktisch inzetbaar.
+                conceptantwoorden voorbereiden.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-slate-700">
                 <li>• E-mails automatisch analyseren</li>
@@ -410,8 +410,8 @@ export default function JHGProcessSolutionsWebsite() {
               Voor bedrijven die facturen willen automatiseren en klantmails slimmer willen afhandelen
             </h3>
             <p className="mt-4 max-w-4xl text-slate-600">
-              Of het nu gaat om facturatie automatisering, Moneybird automatisering,
-              inbox automatisering of klantmails automatisering: het doel is altijd hetzelfde.
+              Of het nu gaat om facturatie automatisering, moneybird automatisering,
+              facturen automatiseren mkb of inbox automatisering: het doel is altijd hetzelfde.
               Minder losse handelingen, meer snelheid en een proces dat beter schaalbaar wordt.
             </p>
           </div>
@@ -587,7 +587,6 @@ export default function JHGProcessSolutionsWebsite() {
               <div>info@jhgprocess-solutions.com</div>
               <div>+31 646341101</div>
               <div>Roosendaal</div>
-              <div>Samenwerkend met Moneybird voor slimme facturatie automatisering.</div>
             </div>
           </div>
 
@@ -606,6 +605,9 @@ export default function JHGProcessSolutionsWebsite() {
                 >
                   Algemene voorwaarden
                 </Link>
+              </div>
+              <div className="pt-2">
+                Samenwerkend met Moneybird voor slimme facturatie automatisering.
               </div>
             </div>
           </div>

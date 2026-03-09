@@ -9,22 +9,18 @@ export const metadata: Metadata = {
     template: "%s | JHGProcess-Solutions",
   },
   description:
-    "JHGProcess-Solutions helpt bedrijven met facturatie automatisering, Moneybird automatisering, inbox automatisering en klantmails automatisering.",
+    "JHGProcess-Solutions helpt bedrijven met facturatie automatisering, moneybird automatisering, facturen automatiseren mkb en inbox automatisering.",
   keywords: [
     "JHGProcess-Solutions",
     "JHGProcess Solutions",
     "facturatie automatisering",
-    "Moneybird automatisering",
+    "moneybird automatisering",
     "facturen automatiseren mkb",
     "inbox automatisering",
     "klantmails automatisering",
     "workflow automatisering",
     "administratie automatisering",
   ],
-  applicationName: "JHGProcess-Solutions",
-  authors: [{ name: "JHGProcess-Solutions" }],
-  creator: "JHGProcess-Solutions",
-  publisher: "JHGProcess-Solutions",
   alternates: {
     canonical: "https://www.jhgprocess-solutions.com",
   },
@@ -48,13 +44,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
   icons: {
     icon: "/icon.png",
