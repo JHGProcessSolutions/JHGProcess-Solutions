@@ -56,6 +56,26 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "JHGProcess-Solutions",
+  url: "https://www.jhgprocess-solutions.com",
+  logo: "https://www.jhgprocess-solutions.com/LOGO - JHGProcess-Solutions.png",
+  email: "info@jhgprocess-solutions.com",
+  telephone: "+31646341101",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Roosendaal",
+    addressCountry: "NL",
+  },
 };
 
 export default function RootLayout({
@@ -65,7 +85,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
