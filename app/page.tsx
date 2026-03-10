@@ -28,36 +28,33 @@ export default function JHGProcessSolutionsWebsite() {
 
   const packages = [
     {
-      name: "Facturatie automatisering",
+      name: "Tot 150 facturen",
       description:
-        "Voor bedrijven die hun facturatieproces van invoer tot verzending en opvolging automatisch willen laten verlopen.",
+        "Geschikt voor kleinere organisaties die hun facturatie en mailbox processen willen automatiseren.",
       points: [
-        "Automatische factuuropbouw",
-        "PDF generatie en verzending",
-        "Koppeling met boekhouding",
-        "Betalingsherinneringen en opvolging",
+        "Voor bedrijven met een lager volume",
+        "Snellere verwerking zonder extra handmatig werk",
+        "Overzichtelijke automatisering van facturatie en mailbox",
       ],
     },
     {
-      name: "Inbox automatisering",
+      name: "150 – 750 facturen",
       description:
-        "Voor bedrijven die inkomende e-mails slimmer willen verwerken, routeren en voorbereiden zonder onnodig handmatig werk.",
+        "Voor groeiende bedrijven waar administratieve processen steeds meer tijd beginnen te kosten.",
       points: [
-        "Automatische e-mailanalyse",
-        "Urgentie en intentie herkennen",
-        "Samenvattingen en conceptantwoorden",
-        "Routing naar de juiste afdeling of vervolgactie",
+        "Voor bedrijven met structureel volume",
+        "Meer procescontrole en minder foutgevoeligheid",
+        "Geschikt voor verdere opschaling",
       ],
     },
     {
-      name: "Combinatieoplossing",
+      name: "750+ facturen",
       description:
-        "Voor bedrijven die zowel facturatie als inboxverwerking willen automatiseren in één compleet en schaalbaar systeem.",
+        "Voor organisaties met grotere volumes waar automatisering een grote impact heeft op efficiëntie en opvolging.",
       points: [
-        "Facturatie en inbox in één workflow",
-        "Minder administratie en snellere opvolging",
-        "Inrichting op basis van uw proces",
-        "Prijs op aanvraag en afgestemd op uw situatie",
+        "Voor bedrijven met hoge aantallen en complexere workflows",
+        "Sterke tijdsbesparing op facturatie en mailbox verwerking",
+        "Inrichting afgestemd op proces en schaalbaarheid",
       ],
     },
   ];
@@ -111,22 +108,22 @@ export default function JHGProcessSolutionsWebsite() {
                 JHGProcess-Solutions
               </div>
               <div className="text-sm text-slate-500">
-                Facturatie automatisering, inbox automatisering en klantmails automatisering
+                Facturatie automatisering en mailbox automatisering
               </div>
             </div>
           </div>
 
           <nav className="hidden shrink-0 items-center gap-7 text-sm text-slate-600 md:flex">
-            <a href="#diensten" className="transition hover:text-[#21467f]">
+            <a href="#diensten" className="font-semibold transition hover:text-[#21467f]">
               Diensten
             </a>
-            <a href="#hoe-het-werkt" className="transition hover:text-[#21467f]">
+            <a href="#hoe-het-werkt" className="font-semibold transition hover:text-[#21467f]">
               Hoe het werkt
             </a>
-            <a href="#pakketten" className="transition hover:text-[#21467f]">
+            <a href="#pakketten" className="font-semibold transition hover:text-[#21467f]">
               Pakketten
             </a>
-            <a href="#over-ons" className="transition hover:text-[#21467f]">
+            <a href="#over-ons" className="font-semibold transition hover:text-[#21467f]">
               Over ons
             </a>
           </nav>
@@ -147,18 +144,23 @@ export default function JHGProcessSolutionsWebsite() {
           <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
             <div>
               <div className="mb-4 inline-flex rounded-full border border-[#d9e4f2] bg-white px-3 py-1 text-sm text-slate-600 shadow-sm">
-                Slimme automatisering voor bedrijven die minder handmatig werk willen
+                Voor bedrijven die administratieve processen concreet willen automatiseren
               </div>
 
               <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-[#21467f] sm:text-5xl lg:text-6xl">
-                Automatiseer uw facturatie, inbox en klantmails.
+                Automatiseer facturatie en mailbox processen met minder handmatig werk.
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                JHGProcess-Solutions helpt bedrijven met facturatie automatisering,
-                moneybird automatisering, facturen automatiseren mkb en inbox automatisering.
-                Zo bespaart uw team tijd, worden processen sneller opgevolgd en neemt
-                handmatig werk sterk af.
+                JHGProcess-Solutions ontwikkelt automatiseringsoplossingen voor bedrijven
+                die hun facturatie en mailbox verwerking efficiënter willen organiseren.
+                Denk aan het automatisch opbouwen en verzenden van facturen, koppelingen
+                met Moneybird en het verwerken, routeren en opvolgen van binnenkomende e-mails.
+              </p>
+
+              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+                Het resultaat: minder administratie, minder foutgevoeligheid,
+                snellere opvolging en meer structuur in dagelijkse processen.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -178,21 +180,21 @@ export default function JHGProcessSolutionsWebsite() {
 
               <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
-                  <div className="text-2xl font-semibold text-[#21467f]">Minder werk</div>
+                  <div className="text-lg font-semibold text-[#21467f]">Facturatie</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Minder handmatige taken en minder fouten
+                    Automatisch opbouwen, genereren, verzenden en opvolgen
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
-                  <div className="text-2xl font-semibold text-[#21467f]">Sneller</div>
+                  <div className="text-lg font-semibold text-[#21467f]">Mailbox</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Facturen en e-mails sneller verwerkt en opgevolgd
+                    Slim verwerken, routeren en voorbereiden van acties
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
-                  <div className="text-2xl font-semibold text-[#21467f]">Schaalbaar</div>
+                  <div className="text-lg font-semibold text-[#21467f]">Integratie</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Een oplossing die meegroeit met uw bedrijf
+                    Koppelingen met bestaande systemen zoals Moneybird
                   </div>
                 </div>
               </div>
@@ -206,12 +208,12 @@ export default function JHGProcessSolutionsWebsite() {
 
                 <div className="mt-6 space-y-4">
                   {[
-                    "Formulier ingevuld of e-mail ontvangen",
-                    "Het systeem analyseert en verwerkt automatisch",
-                    "Factuur wordt opgebouwd of inboxactie wordt gestart",
-                    "Factuur of conceptantwoord wordt automatisch voorbereid of verzonden",
-                    "Boekhouding, logging en opvolging worden bijgewerkt",
-                    "Herinneringen en slimme inboxacties lopen vanzelf door",
+                    "Gegevens komen binnen via formulier, systeem of e-mail",
+                    "Het systeem analyseert automatisch de inhoud en bepaalt de juiste vervolgactie",
+                    "Facturen worden opgebouwd, gegenereerd en verzonden zonder handmatig tussenwerk",
+                    "Mailbox berichten worden gecategoriseerd, doorgestuurd of klaargezet voor opvolging",
+                    "Gegevens worden bijgewerkt in gekoppelde systemen zoals Moneybird",
+                    "Opvolging en administratieve verwerking lopen gestructureerd door",
                   ].map((step, index) => (
                     <div
                       key={step}
@@ -229,191 +231,114 @@ export default function JHGProcessSolutionsWebsite() {
           </div>
         </section>
 
-        <section id="problemen" className="bg-white py-20">
+        <section id="diensten" className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="max-w-3xl">
               <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-                Herkenbaar?
+                Diensten
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-                Veel bedrijven verliezen ongemerkt uren per week aan terugkerend handmatig werk.
+                Praktische automatisering voor processen die dagelijks tijd kosten.
               </h2>
               <p className="mt-4 text-lg text-slate-600">
-                Juist in facturatie, inboxverwerking en klantmails gaat vaak onnodig veel tijd
-                verloren. Dat vertraagt opvolging, verhoogt de foutkans en kost capaciteit.
+                Onze oplossingen richten zich op processen waar binnen bedrijven vaak
+                veel capaciteit verloren gaat: facturatie en mailbox verwerking.
+                Door deze processen slim te automatiseren ontstaat meer snelheid,
+                meer structuur en minder afhankelijkheid van handmatig werk.
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {[
-                "Facturen worden nog handmatig opgebouwd of gecontroleerd",
-                "Klantmails blijven liggen of worden niet consistent opgevolgd",
-                "Inboxverwerking kost veel tijd en vraagt steeds opnieuw aandacht",
-                "Er gaat tijd verloren aan losse stappen, controles en opvolging",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-6 shadow-sm"
-                >
-                  <p className="text-sm leading-7 text-slate-700">{item}</p>
+            <div className="mt-12 grid gap-8 lg:grid-cols-2">
+              <div className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm">
+                <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                  Facturatie automatisering
                 </div>
-              ))}
+                <h3 className="mt-3 text-2xl font-semibold text-[#21467f]">
+                  Van invoer tot verzending automatisch geregeld
+                </h3>
+                <p className="mt-4 text-slate-600">
+                  Facturen worden automatisch opgebouwd op basis van aangeleverde gegevens
+                  of binnenkomende informatie. Het systeem genereert de factuur, maakt
+                  het document aan, verstuurt deze en verwerkt relevante gegevens direct
+                  door in de administratie.
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                  <li>• Automatische opbouw van factuurregels</li>
+                  <li>• Genereren en verzenden van facturen</li>
+                  <li>• Minder handmatige verwerking en minder fouten</li>
+                  <li>• Koppeling met bestaande systemen zoals Moneybird</li>
+                  <li>• Geschikt voor bedrijven met structureel factuurvolume</li>
+                </ul>
+              </div>
+
+              <div className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm">
+                <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                  Mailbox automatisering
+                </div>
+                <h3 className="mt-3 text-2xl font-semibold text-[#21467f]">
+                  Meer overzicht en snellere verwerking van binnenkomende e-mails
+                </h3>
+                <p className="mt-4 text-slate-600">
+                  Binnenkomende e-mails worden automatisch geanalyseerd en verwerkt.
+                  Het systeem kan berichten categoriseren, prioriteren, doorsturen
+                  en klaarzetten voor opvolging, zodat mailboxen overzichtelijk blijven
+                  en communicatie sneller wordt afgehandeld.
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                  <li>• Automatische analyse van binnenkomende e-mails</li>
+                  <li>• Herkennen van onderwerpen, prioriteit en vervolgstappen</li>
+                  <li>• Slim routeren naar de juiste plek binnen het proces</li>
+                  <li>• Minder mailbox chaos en minder losse handelingen</li>
+                  <li>• Betere structuur in communicatie en opvolging</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="diensten" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-              Diensten
-            </div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-              Oplossingen voor facturatie automatisering, inbox automatisering en klantmails automatisering.
-            </h2>
-            <p className="mt-4 text-lg text-slate-600">
-              U kiest voor alleen facturatie automatisering, alleen inbox automatisering
-              of een combinatie van beide. De oplossing wordt afgestemd op uw proces,
-              werkwijze en volume.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            <div className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
-              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-                Facturatie automatisering
-              </div>
-              <h3 className="mt-3 text-2xl font-semibold text-[#21467f]">
-                Van invoer tot verzending automatisch geregeld
-              </h3>
-              <p className="mt-4 text-slate-600">
-                Uw medewerkers vullen alleen een formulier in. Daarna loopt het proces
-                automatisch door: opbouw van factuurregels, PDF generatie, verzending,
-                boekhouding en opvolging. Ideaal voor bedrijven die facturen willen automatiseren.
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                <li>• Facturen automatisch genereren</li>
-                <li>• PDF&apos;s automatisch maken en verzenden</li>
-                <li>• Koppeling met boekhouding of moneybird automatisering</li>
-                <li>• Automatische betalingsherinneringen</li>
-                <li>• Minder handmatig werk en sneller betaald</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
-              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-                Inbox automatisering
-              </div>
-              <h3 className="mt-3 text-2xl font-semibold text-[#21467f]">
-                E-mails slimmer, sneller en consistenter verwerken
-              </h3>
-              <p className="mt-4 text-slate-600">
-                Binnenkomende e-mails worden automatisch geanalyseerd, gecategoriseerd en
-                samengevat. Het systeem kan vervolgacties starten, routeren en
-                conceptantwoorden voorbereiden.
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                <li>• E-mails automatisch analyseren</li>
-                <li>• Urgentie en intentie herkennen</li>
-                <li>• Samenvattingen en conceptantwoorden</li>
-                <li>• Berichten naar de juiste plek routeren</li>
-                <li>• Snellere en consistentere communicatie</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="hoe-het-werkt" className="bg-white py-20">
+        <section id="hoe-het-werkt" className="py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="max-w-3xl">
               <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
                 Hoe het werkt
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-                Eenvoudig voor uw team, krachtig achter de schermen.
+                Eenvoudig in gebruik, krachtig in de uitvoering.
               </h2>
               <p className="mt-4 text-lg text-slate-600">
-                De werkwijze blijft eenvoudig voor uw medewerkers, terwijl op de achtergrond
-                automatisering het proces overneemt.
+                De werkwijze blijft overzichtelijk voor uw team, terwijl op de achtergrond
+                automatisering zorgt voor verwerking, opvolging en integratie.
               </p>
             </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {[
                 {
-                  title: "1. Invoer of e-mail",
-                  text: "Een medewerker vult een formulier in of er komt een e-mail binnen.",
+                  title: "1. Invoer",
+                  text: "Gegevens komen binnen via een formulier, bestaande systemen of e-mail.",
                 },
                 {
-                  title: "2. Automatische verwerking",
-                  text: "Het systeem analyseert de informatie en bepaalt automatisch de juiste vervolgstappen.",
+                  title: "2. Analyse",
+                  text: "Het systeem analyseert de inhoud en bepaalt automatisch welke actie nodig is.",
                 },
                 {
                   title: "3. Uitvoering",
-                  text: "Facturen, routing, opvolging en conceptacties worden automatisch klaargezet of uitgevoerd.",
+                  text: "Facturatie of mailbox verwerking wordt automatisch gestart en afgehandeld.",
                 },
                 {
-                  title: "4. Inzicht en controle",
-                  text: "U houdt overzicht zonder losse handelingen, foutgevoelige stappen of vertraging.",
+                  title: "4. Integratie",
+                  text: "Relevante gegevens worden bijgewerkt in gekoppelde software zoals Moneybird.",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-6 shadow-sm"
+                  className="rounded-[2rem] border border-[#d9e4f2] bg-white p-6 shadow-sm"
                 >
-                  <div className="text-lg font-semibold text-[#21467f]">
-                    {item.title}
-                  </div>
+                  <div className="text-lg font-semibold text-[#21467f]">{item.title}</div>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section id="voordelen" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-              Wat levert het op?
-            </div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-              Minder administratie, snellere opvolging en meer rust in uw processen.
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-8 lg:grid-cols-3">
-            {[
-              {
-                title: "Minder administratie",
-                text: "Taken die normaal uren per week kosten worden grotendeels automatisch verwerkt.",
-              },
-              {
-                title: "Snellere opvolging",
-                text: "Facturen, e-mails en vervolgstappen worden sneller verwerkt zonder vertraging.",
-              },
-              {
-                title: "Minder fouten",
-                text: "Door minder handmatige stappen daalt de kans op fouten en blijft het proces consistenter.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm"
-              >
-                <h3 className="text-xl font-semibold text-[#21467f]">{item.title}</h3>
-                <p className="mt-3 text-slate-600">{item.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
-            <h3 className="text-2xl font-semibold text-[#21467f]">
-              Voor bedrijven die facturen willen automatiseren en klantmails slimmer willen afhandelen
-            </h3>
-            <p className="mt-4 max-w-4xl text-slate-600">
-              Of het nu gaat om facturatie automatisering, moneybird automatisering,
-              facturen automatiseren mkb of inbox automatisering: het doel is altijd hetzelfde.
-              Minder losse handelingen, meer snelheid en een proces dat beter schaalbaar wordt.
-            </p>
           </div>
         </section>
 
@@ -424,13 +349,11 @@ export default function JHGProcessSolutionsWebsite() {
                 Pakketten
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Oplossingen afgestemd op uw proces en behoefte.
+                Oplossingen afgestemd op volume en proces.
               </h2>
               <p className="mt-4 text-lg text-slate-200">
-                U kunt kiezen voor alleen facturatie automatisering, alleen
-                inbox automatisering of een combinatie van beide. De prijs wordt
-                bepaald op basis van uw situatie, volume, gewenste inrichting en
-                mate van support.
+                Onze pakketten worden afgestemd op het aantal facturen, de complexiteit
+                van het proces en de mate van automatisering die nodig is binnen uw organisatie.
               </p>
             </div>
 
@@ -446,7 +369,7 @@ export default function JHGProcessSolutionsWebsite() {
                   </p>
 
                   <div className="mt-6 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
-                    Prijs op aanvraag, afgestemd op uw bedrijf en wensen
+                    Inrichting afgestemd op uw bedrijf en gewenste automatisering
                   </div>
 
                   <ul className="mt-6 space-y-3 text-sm text-slate-700">
@@ -468,19 +391,19 @@ export default function JHGProcessSolutionsWebsite() {
                   Over ons
                 </div>
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-                  Praktische automatisering die direct tijd oplevert.
+                  Gericht op concrete automatisering met directe impact.
                 </h2>
               </div>
               <div className="text-slate-600">
                 <p className="leading-8">
-                  JHGProcess-Solutions helpt bedrijven met het automatiseren van
-                  facturatie, inboxverwerking en klantcommunicatie. Wij bouwen
-                  oplossingen die terugkerend werk verminderen, opvolging versnellen
-                  en processen overzichtelijker maken.
+                  JHGProcess-Solutions ontwikkelt praktische automatiseringsoplossingen
+                  voor bedrijven die terugkerende administratieve processen efficiënter
+                  willen organiseren. De focus ligt op facturatie en mailbox verwerking,
+                  omdat juist daar binnen veel organisaties structureel tijd verloren gaat.
                 </p>
                 <p className="mt-4 leading-8">
-                  Geen onnodig ingewikkelde trajecten, maar praktische automatisering
-                  die aansluit op uw werkwijze en direct waarde toevoegt in de dagelijkse praktijk.
+                  Onze aanpak is gericht op duidelijkheid, betrouwbaarheid en schaalbaarheid:
+                  processen worden niet ingewikkelder gemaakt, maar juist concreter en beter uitvoerbaar.
                 </p>
               </div>
             </div>
@@ -494,11 +417,12 @@ export default function JHGProcessSolutionsWebsite() {
                 Vrijblijvende afspraak
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-                Ontdek in een kort gesprek wat automatisering voor uw bedrijf kan opleveren.
+                Bespreek waar binnen uw bedrijf de meeste efficiëntiewinst te behalen is.
               </h2>
               <p className="mt-4 max-w-2xl text-lg text-slate-600">
-                In een vrijblijvende afspraak kijken we samen waar de meeste tijd verloren
-                gaat in facturatie, inboxverwerking en klantmails — en waar de grootste winst te behalen valt.
+                In een kort gesprek kijken we samen naar uw huidige werkwijze rond
+                facturatie en mailbox verwerking, en waar automatisering direct
+                waarde kan toevoegen in tijd, overzicht en opvolging.
               </p>
 
               <div className="mt-8 space-y-3 text-sm text-slate-600">
@@ -543,7 +467,7 @@ export default function JHGProcessSolutionsWebsite() {
                 required
               />
               <textarea
-                placeholder="Vertel kort waar momenteel de meeste tijd in gaat zitten"
+                placeholder="Vertel kort wat u momenteel handmatig verwerkt in facturatie of mailbox"
                 rows={5}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -576,7 +500,7 @@ export default function JHGProcessSolutionsWebsite() {
             <div>
               <div className="font-medium text-[#21467f]">JHGProcess-Solutions</div>
               <div className="mt-1">
-                Facturatie automatisering, inbox automatisering en klantmails automatisering
+                Facturatie automatisering en mailbox automatisering
               </div>
             </div>
           </div>

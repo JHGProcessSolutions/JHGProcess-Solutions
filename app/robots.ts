@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://jhgprocess-solutions.com/sitemap.xml",
+    sitemap: "https://www.jhgprocess-solutions.com/sitemap.xml",
+    host: "https://www.jhgprocess-solutions.com",
   };
 }

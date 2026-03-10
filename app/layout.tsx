@@ -5,29 +5,30 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jhgprocess-solutions.com"),
   title: {
-    default: "JHGProcess-Solutions | Facturatie automatisering en inbox automatisering",
+    default: "JHGProcess-Solutions | Facturatie automatisering en mailbox automatisering",
     template: "%s | JHGProcess-Solutions",
   },
   description:
-    "JHGProcess-Solutions helpt bedrijven met facturatie automatisering, moneybird automatisering, facturen automatiseren mkb en inbox automatisering.",
+    "JHGProcess-Solutions helpt bedrijven met facturatie automatisering en mailbox automatisering. Automatiseer facturen, e-mailverwerking en administratieve workflows met slimme koppelingen zoals Moneybird.",
   keywords: [
     "JHGProcess-Solutions",
     "JHGProcess Solutions",
     "facturatie automatisering",
+    "mailbox automatisering",
     "moneybird automatisering",
     "facturen automatiseren mkb",
-    "inbox automatisering",
-    "klantmails automatisering",
-    "workflow automatisering",
     "administratie automatisering",
+    "workflow automatisering",
+    "email automatisering bedrijf",
+    "factuur automatisering",
   ],
   alternates: {
     canonical: "https://www.jhgprocess-solutions.com",
   },
   openGraph: {
-    title: "JHGProcess-Solutions | Facturatie automatisering en inbox automatisering",
+    title: "JHGProcess-Solutions | Facturatie automatisering en mailbox automatisering",
     description:
-      "Automatiseer facturatie, inboxverwerking en klantmails met JHGProcess-Solutions.",
+      "Automatiseer facturatie, mailbox verwerking en administratieve workflows met JHGProcess-Solutions.",
     url: "https://www.jhgprocess-solutions.com",
     siteName: "JHGProcess-Solutions",
     locale: "nl_NL",
@@ -41,9 +42,23 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "JHGProcess-Solutions | Facturatie automatisering en mailbox automatisering",
+    description:
+      "Automatiseer facturatie, mailbox verwerking en administratieve workflows met JHGProcess-Solutions.",
+    images: ["/LOGO - JHGProcess-Solutions.png"],
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
     icon: "/icon.png",
@@ -65,6 +80,10 @@ const structuredData = {
     addressLocality: "Roosendaal",
     addressCountry: "NL",
   },
+  areaServed: "NL",
+  description:
+    "JHGProcess-Solutions helpt bedrijven met facturatie automatisering en mailbox automatisering.",
+  sameAs: [],
 };
 
 export default function RootLayout({
