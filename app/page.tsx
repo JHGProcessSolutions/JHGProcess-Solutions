@@ -156,7 +156,7 @@ export default function JHGProcessSolutionsWebsite() {
           <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
             <div>
               <div className="mb-4 inline-flex rounded-full border border-[#d9e4f2] bg-white px-3 py-1 text-sm text-slate-600 shadow-sm">
-                Voor bedrijven die minder tijd willen verliezen aan administratie en mailbox verwerking
+                Voor bedrijven die 5 tot 25+ uur per week willen besparen op facturatie en mailboxbeheer
               </div>
 
               <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-[#21467f] sm:text-5xl lg:text-6xl">
