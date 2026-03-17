@@ -29,9 +29,9 @@ export default function JHGProcessSolutionsWebsite() {
   const packages = [
     {
       name: "Starter",
-      volume: "Tot 150 facturen · tot 1.500 e-mails per maand",
+      volume: "Tot 150 facturen · tot 1.000 e-mails per maand",
       description:
-        "Voor kleinere organisaties die hun facturatie en mailbox processen professioneel willen automatiseren zonder direct zware interne systemen te hoeven inzetten.",
+        "Voor kleinere organisaties die facturatie en mailboxbeheer professioneler willen inrichten en structureel tijd willen besparen op terugkerende handmatige werkzaamheden.",
       badge:
         "Inrichting afgestemd op uw bedrijf, processen en gewenste automatisering",
       points: [
@@ -43,9 +43,9 @@ export default function JHGProcessSolutionsWebsite() {
     },
     {
       name: "Groei",
-      volume: "150 – 750 facturen · 1.500 – 6.000 e-mails per maand",
+      volume: "150 – 750 facturen · 1.000 – 3.000 e-mails per maand",
       description:
-        "Voor groeiende bedrijven waar administratie, mailbox verwerking en opvolging steeds meer tijd beginnen te kosten en schaalbaarheid belangrijk wordt.",
+        "Voor groeiende bedrijven waar administratie, mailboxbeheer en opvolging steeds meer tijd beginnen te kosten en waar schaalbaarheid en processtructuur belangrijk worden.",
       badge:
         "Inrichting afgestemd op uw bedrijf, processen en gewenste automatisering",
       points: [
@@ -57,9 +57,9 @@ export default function JHGProcessSolutionsWebsite() {
     },
     {
       name: "Scale",
-      volume: "750+ facturen · 6.000+ e-mails per maand",
+      volume: "750+ facturen · 3.000+ e-mails per maand",
       description:
-        "Voor organisaties met grotere volumes en complexere workflows, waar automatisering directe impact heeft op efficiëntie, opvolging en structuur.",
+        "Voor organisaties met grotere volumes en complexere workflows, waar automatisering directe impact heeft op efficiëntie, opvolging, structuur en dagelijkse capaciteit.",
       badge:
         "Inrichting afgestemd op uw bedrijf, processen en gewenste automatisering",
       points: [
