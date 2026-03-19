@@ -19,6 +19,7 @@ type PackageItem = {
   name: string;
   volume: string;
   price: string;
+  valueHint: string;
   time: string;
   description: string;
   points: string[];
@@ -39,7 +40,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Starter",
       volume: "Tot 150 facturen per maand",
-      price: "Vanaf €299 / maand",
+      price: "Vanaf €279 / maand",
+      valueHint: "Vaak al voordeliger dan structureel handmatig verwerken",
       time: "Gemiddeld 3–6 uur per week · 12–24 uur per maand besparing",
       description:
         "Voor kleinere bedrijven die hun facturatie professioneler willen inrichten en terugkerende administratieve handelingen structureel willen terugdringen.",
@@ -53,7 +55,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Groei",
       volume: "150 – 750 facturen per maand",
-      price: "Vanaf €499 / maand",
+      price: "Vanaf €449 / maand",
+      valueHint: "Sterk wanneer facturatie begint te drukken op tijd en structuur",
       time: "Gemiddeld 5–12 uur per week · 20–48 uur per maand besparing",
       description:
         "Voor groeiende bedrijven waar facturatie steeds meer tijd begint te kosten en waar snelheid, overzicht en schaalbaarheid belangrijk worden.",
@@ -67,7 +70,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Scale",
       volume: "750+ facturen per maand",
-      price: "Vanaf €799 / maand",
+      price: "Vanaf €699 / maand",
+      valueHint: "Ontworpen voor maximale tijdswinst op grotere volumes",
       time: "Gemiddeld 10–20+ uur per week · 40–80+ uur per maand besparing",
       description:
         "Voor organisaties met grotere volumes en complexere processen, waar automatisering directe impact heeft op capaciteit, opvolging en efficiëntie.",
@@ -84,7 +88,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Starter",
       volume: "Tot 1.000 e-mails per maand",
-      price: "Vanaf €349 / maand",
+      price: "Vanaf €329 / maand",
+      valueHint: "Vaak al voordeliger dan structureel mailboxbeheer uit handen laten lopen",
       time: "Gemiddeld 4–8 uur per week · 16–32 uur per maand besparing",
       description:
         "Voor bedrijven die mailboxbeheer overzichtelijker willen maken en minder tijd willen verliezen aan verwerken, routeren en opvolgen van berichten.",
@@ -98,7 +103,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Groei",
       volume: "1.000 – 3.000 e-mails per maand",
-      price: "Vanaf €649 / maand",
+      price: "Vanaf €599 / maand",
+      valueHint: "Sterk bij teams waar snelheid en opvolging direct verschil maken",
       time: "Gemiddeld 8–15 uur per week · 32–60 uur per maand besparing",
       description:
         "Voor bedrijven waar mailboxbeheer steeds zwaarder op de organisatie drukt en waar snelheid, prioritering en processtructuur belangrijk zijn.",
@@ -112,7 +118,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Scale",
       volume: "3.000+ e-mails per maand",
-      price: "Vanaf €999 / maand",
+      price: "Vanaf €899 / maand",
+      valueHint: "Voor organisaties waar mailboxdruk direct capaciteit kost",
       time: "Gemiddeld 15–25+ uur per week · 60–100+ uur per maand besparing",
       description:
         "Voor organisaties waar mailboxbeheer veel capaciteit kost en waar automatisering direct helpt om rust, overzicht en snelheid terug te brengen.",
@@ -129,7 +136,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Starter",
       volume: "Tot 150 facturen + tot 1.000 e-mails per maand",
-      price: "Vanaf €599 / maand",
+      price: "Vanaf €549 / maand",
+      valueHint: "Een sterke stap voor bedrijven die meerdere processen tegelijk willen ontlasten",
       time: "Gemiddeld 8–14 uur per week · 32–56 uur per maand besparing",
       description:
         "Voor bedrijven die zowel facturatie als mailboxbeheer slimmer willen organiseren en direct merkbaar tijd willen terugwinnen in de dagelijkse operatie.",
@@ -143,7 +151,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Groei",
       volume: "150 – 750 facturen + 1.000 – 3.000 e-mails per maand",
-      price: "Vanaf €999 / maand",
+      price: "Vanaf €899 / maand",
+      valueHint: "Ideaal wanneer meerdere terugkerende processen tegelijk beginnen te drukken",
       time: "Gemiddeld 12–22 uur per week · 48–88 uur per maand besparing",
       description:
         "Voor groeiende bedrijven waar meerdere terugkerende processen tegelijk beginnen te drukken op tijd, overzicht en interne capaciteit.",
@@ -157,7 +166,8 @@ export default function JHGProcessSolutionsWebsite() {
     {
       name: "Scale",
       volume: "750+ facturen + 3.000+ e-mails per maand",
-      price: "Vanaf €1.499 / maand",
+      price: "Vanaf €1.349 / maand",
+      valueHint: "Voor bedrijven waar brede automatisering directe impact heeft op rust en winstgevendheid",
       time: "Gemiddeld 20–35+ uur per week · 80–140+ uur per maand besparing",
       description:
         "Voor organisaties met grotere volumes en complexere workflows, waar brede automatisering directe impact heeft op rust, capaciteit en winstgevendheid.",
@@ -489,7 +499,8 @@ export default function JHGProcessSolutionsWebsite() {
                       <div className="text-lg font-semibold">{item.name}</div>
                       <div className="mt-2 text-sm font-medium text-[#21467f]">{item.volume}</div>
                       <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                      <div className="mt-2 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
+                      <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
+                      <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
                         {item.time}
                       </div>
 
@@ -526,7 +537,8 @@ export default function JHGProcessSolutionsWebsite() {
                       <div className="text-lg font-semibold">{item.name}</div>
                       <div className="mt-2 text-sm font-medium text-[#21467f]">{item.volume}</div>
                       <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                      <div className="mt-2 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
+                      <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
+                      <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
                         {item.time}
                       </div>
 
@@ -563,7 +575,8 @@ export default function JHGProcessSolutionsWebsite() {
                       <div className="text-lg font-semibold">{item.name}</div>
                       <div className="mt-2 text-sm font-medium text-[#21467f]">{item.volume}</div>
                       <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                      <div className="mt-2 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
+                      <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
+                      <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
                         {item.time}
                       </div>
 
