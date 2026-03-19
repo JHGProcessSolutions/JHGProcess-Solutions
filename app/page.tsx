@@ -470,136 +470,224 @@ export default function JHGProcessSolutionsWebsite() {
                 Pakketten
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Oplossingen afgestemd op volume, proces en automatiseringsbehoefte.
+                Kies het traject dat past bij uw proces en groeifase.
               </h2>
               <p className="mt-4 text-lg text-slate-200">
-                Kies de oplossing die past bij uw volume en werkwijze. Alle pakketten
-                zijn gericht op structurele tijdswinst, meer overzicht en minder
-                handmatig werk.
+                Klik op een oplossing om direct naar de bijbehorende pakketten en prijzen te gaan.
               </p>
             </div>
 
-            <div className="mt-12 space-y-16">
-              <div>
-                <div className="mb-6">
-                  <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#b7cae3]">
-                    Facturatie automatisering
-                  </div>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">
-                    Voor bedrijven die hun facturatieproces slimmer en sneller willen laten verlopen.
-                  </h3>
-                </div>
-
-                <div className="grid gap-8 lg:grid-cols-3">
-                  {invoicePackages.map((item) => (
-                    <div
-                      key={item.name}
-                      className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 text-slate-950 shadow-sm"
-                    >
-                      <div className="text-lg font-semibold">{item.name}</div>
-                      <div className="mt-2 text-sm font-medium text-[#21467f]">{item.volume}</div>
-                      <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                      <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
-                      <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
-                        {item.time}
-                      </div>
-
-                      <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
-                        {item.description}
-                      </p>
-
-                      <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                        {item.points.map((point) => (
-                          <li key={point}>• {point}</li>
-                        ))}
-                      </ul>
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              <a
+                href="#facturatie-pakketten"
+                className="group overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-8 transition hover:-translate-y-1 hover:bg-white/15"
+              >
+                <div className="flex h-full flex-col justify-between gap-8">
+                  <div>
+                    <div className="text-sm uppercase tracking-[0.2em] text-[#b7cae3]">
+                      Oplossing 1
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <div className="mb-6">
-                  <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#b7cae3]">
-                    Mailbox automatisering
+                    <h3 className="mt-3 text-3xl font-semibold text-white">
+                      Facturatie automatisering
+                    </h3>
+                    <p className="mt-4 max-w-md text-base leading-7 text-slate-200">
+                      Voor bedrijven die minder tijd willen verliezen aan terugkerende facturatie, verzending en verwerking.
+                    </p>
                   </div>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">
-                    Voor bedrijven die mailbox chaos willen omzetten in overzicht en opvolging.
-                  </h3>
-                </div>
-
-                <div className="grid gap-8 lg:grid-cols-3">
-                  {mailboxPackages.map((item) => (
-                    <div
-                      key={item.name}
-                      className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 text-slate-950 shadow-sm"
-                    >
-                      <div className="text-lg font-semibold">{item.name}</div>
-                      <div className="mt-2 text-sm font-medium text-[#21467f]">{item.volume}</div>
-                      <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                      <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
-                      <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
-                        {item.time}
-                      </div>
-
-                      <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
-                        {item.description}
-                      </p>
-
-                      <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                        {item.points.map((point) => (
-                          <li key={point}>• {point}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <div className="mb-6">
-                  <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#b7cae3]">
-                    Combinatiepakket
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-white">Bekijk pakketten</span>
+                    <span className="text-2xl text-[#b7cae3] transition group-hover:translate-x-1">
+                      →
+                    </span>
                   </div>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">
-                    Voor bedrijven die zowel facturatie als mailboxbeheer structureel willen automatiseren.
-                  </h3>
                 </div>
+              </a>
 
-                <div className="grid gap-8 lg:grid-cols-3">
-                  {comboPackages.map((item) => (
-                    <div
-                      key={item.name}
-                      className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 text-slate-950 shadow-sm"
-                    >
-                      <div className="text-lg font-semibold">{item.name}</div>
-                      <div className="mt-2 text-sm font-medium text-[#21467f]">{item.volume}</div>
-                      <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                      <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
-                      <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f]">
-                        {item.time}
-                      </div>
-
-                      <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
-                        {item.description}
-                      </p>
-
-                      <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                        {item.points.map((point) => (
-                          <li key={point}>• {point}</li>
-                        ))}
-                      </ul>
+              <a
+                href="#mailbox-pakketten"
+                className="group overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-8 transition hover:-translate-y-1 hover:bg-white/15"
+              >
+                <div className="flex h-full flex-col justify-between gap-8">
+                  <div>
+                    <div className="text-sm uppercase tracking-[0.2em] text-[#b7cae3]">
+                      Oplossing 2
                     </div>
-                  ))}
+                    <h3 className="mt-3 text-3xl font-semibold text-white">
+                      Mailbox automatisering
+                    </h3>
+                    <p className="mt-4 max-w-md text-base leading-7 text-slate-200">
+                      Voor bedrijven die mailbox chaos willen omzetten in overzicht, routing en snellere opvolging.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-white">Bekijk pakketten</span>
+                    <span className="text-2xl text-[#b7cae3] transition group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </a>
+
+              <a
+                href="#combi-pakketten"
+                className="group overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-8 transition hover:-translate-y-1 hover:bg-white/15"
+              >
+                <div className="flex h-full flex-col justify-between gap-8">
+                  <div>
+                    <div className="text-sm uppercase tracking-[0.2em] text-[#b7cae3]">
+                      Oplossing 3
+                    </div>
+                    <h3 className="mt-3 text-3xl font-semibold text-white">
+                      Combinatiepakket
+                    </h3>
+                    <p className="mt-4 max-w-md text-base leading-7 text-slate-200">
+                      Voor bedrijven die facturatie en mailboxbeheer tegelijk structureel willen ontlasten.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-white">Bekijk pakketten</span>
+                    <span className="text-2xl text-[#b7cae3] transition group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </section>
 
-        <section id="over-ons" className="bg-white py-20">
+        <section id="facturatie-pakketten" className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid gap-10 rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm lg:grid-cols-2 lg:p-12">
+            <div className="mb-10 max-w-4xl">
+              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                Facturatie automatisering
+              </div>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
+                Voor bedrijven die hun facturatieproces slimmer en sneller willen laten verlopen.
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                Gericht op minder handmatig werk, meer structuur en snellere verwerking van terugkerende factuurstromen.
+              </p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-3">
+              {invoicePackages.map((item) => (
+                <div
+                  key={item.name}
+                  className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm"
+                >
+                  <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
+                  <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
+                  <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
+                  <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
+                  <div className="mt-3 rounded-2xl bg-white px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
+                    {item.time}
+                  </div>
+
+                  <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+
+                  <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                    {item.points.map((point) => (
+                      <li key={point}>• {point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="mailbox-pakketten" className="bg-[#f4f7fb] py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mb-10 max-w-4xl">
+              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                Mailbox automatisering
+              </div>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
+                Voor bedrijven die mailbox chaos willen omzetten in overzicht en opvolging.
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                Gericht op snellere verwerking, minder zoekwerk en meer grip op berichten die opvolging nodig hebben.
+              </p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-3">
+              {mailboxPackages.map((item) => (
+                <div
+                  key={item.name}
+                  className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm"
+                >
+                  <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
+                  <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
+                  <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
+                  <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
+                  <div className="mt-3 rounded-2xl bg-[#f8fbff] px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
+                    {item.time}
+                  </div>
+
+                  <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+
+                  <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                    {item.points.map((point) => (
+                      <li key={point}>• {point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="combi-pakketten" className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mb-10 max-w-4xl">
+              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
+                Combinatiepakket
+              </div>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
+                Voor bedrijven die zowel facturatie als mailboxbeheer structureel willen automatiseren.
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                Gericht op bedrijven die meerdere terugkerende processen tegelijk willen ontlasten en daar direct capaciteit mee willen terugwinnen.
+              </p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-3">
+              {comboPackages.map((item) => (
+                <div
+                  key={item.name}
+                  className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm"
+                >
+                  <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
+                  <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
+                  <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
+                  <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
+                  <div className="mt-3 rounded-2xl bg-white px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
+                    {item.time}
+                  </div>
+
+                  <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+
+                  <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                    {item.points.map((point) => (
+                      <li key={point}>• {point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="over-ons" className="bg-[#f4f7fb] py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-10 rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm lg:grid-cols-2 lg:p-12">
               <div>
                 <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
                   Over ons
