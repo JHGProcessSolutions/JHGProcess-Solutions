@@ -15,16 +15,6 @@ type ApiResponse = {
   error?: string;
 };
 
-type PackageItem = {
-  name: string;
-  volume: string;
-  price: string;
-  valueHint: string;
-  time: string;
-  description: string;
-  points: string[];
-};
-
 export default function JHGProcessSolutionsWebsite() {
   const [form, setForm] = useState<FormState>({
     company: "",
@@ -35,150 +25,6 @@ export default function JHGProcessSolutionsWebsite() {
 
   const [status, setStatus] = useState("");
   const [isSending, setIsSending] = useState(false);
-
-  const invoicePackages: PackageItem[] = [
-    {
-      name: "Starter",
-      volume: "Tot 150 facturen per maand",
-      price: "Vanaf €279 / maand",
-      valueHint: "Vaak al voordeliger dan structureel handmatig verwerken",
-      time: "Gemiddeld 3–6 uur per week · 12–24 uur per maand besparing",
-      description:
-        "Voor kleinere bedrijven die hun facturatie professioneler willen inrichten en terugkerende administratieve handelingen structureel willen terugdringen.",
-      points: [
-        "Automatische opbouw van facturen",
-        "Genereren en verzenden zonder onnodig handmatig werk",
-        "Minder fouten en meer grip op terugkerende processen",
-        "Koppeling met Moneybird waar relevant",
-      ],
-    },
-    {
-      name: "Groei",
-      volume: "150 – 750 facturen per maand",
-      price: "Vanaf €449 / maand",
-      valueHint: "Sterk wanneer facturatie begint te drukken op tijd en structuur",
-      time: "Gemiddeld 5–12 uur per week · 20–48 uur per maand besparing",
-      description:
-        "Voor groeiende bedrijven waar facturatie steeds meer tijd begint te kosten en waar snelheid, overzicht en schaalbaarheid belangrijk worden.",
-      points: [
-        "Meer procescontrole bij hoger volume",
-        "Snellere verwerking en minder foutgevoeligheid",
-        "Sterkere aansluiting op bestaande workflows",
-        "Geschikt voor bedrijven met terugkerende factuurstromen",
-      ],
-    },
-    {
-      name: "Scale",
-      volume: "750+ facturen per maand",
-      price: "Vanaf €699 / maand",
-      valueHint: "Ontworpen voor maximale tijdswinst op grotere volumes",
-      time: "Gemiddeld 10–20+ uur per week · 40–80+ uur per maand besparing",
-      description:
-        "Voor organisaties met grotere volumes en complexere processen, waar automatisering directe impact heeft op capaciteit, opvolging en efficiëntie.",
-      points: [
-        "Sterke tijdswinst op grotere aantallen",
-        "Geschikt voor complexere en terugkerende processen",
-        "Procesgerichte automatisering met meer grip op uitvoering",
-        "Meer rust en minder administratieve druk op het team",
-      ],
-    },
-  ];
-
-  const mailboxPackages: PackageItem[] = [
-    {
-      name: "Starter",
-      volume: "Tot 1.000 e-mails per maand",
-      price: "Vanaf €329 / maand",
-      valueHint: "Vaak al voordeliger dan structureel mailboxbeheer uit handen laten lopen",
-      time: "Gemiddeld 4–8 uur per week · 16–32 uur per maand besparing",
-      description:
-        "Voor bedrijven die mailboxbeheer overzichtelijker willen maken en minder tijd willen verliezen aan verwerken, routeren en opvolgen van berichten.",
-      points: [
-        "Automatische analyse van binnenkomende e-mails",
-        "Slim routeren en klaarzetten voor opvolging",
-        "Minder mailbox chaos en minder sorteerwerk",
-        "Eigen dashboard voor mailbox automatisering",
-      ],
-    },
-    {
-      name: "Groei",
-      volume: "1.000 – 3.000 e-mails per maand",
-      price: "Vanaf €599 / maand",
-      valueHint: "Sterk bij teams waar snelheid en opvolging direct verschil maken",
-      time: "Gemiddeld 8–15 uur per week · 32–60 uur per maand besparing",
-      description:
-        "Voor bedrijven waar mailboxbeheer steeds zwaarder op de organisatie drukt en waar snelheid, prioritering en processtructuur belangrijk zijn.",
-      points: [
-        "Herkennen van onderwerpen, prioriteit en vervolgstappen",
-        "Snellere verwerking van grotere volumes",
-        "Meer grip op opvolging en interne routing",
-        "Geschikt voor teams met terugkerende mailboxdruk",
-      ],
-    },
-    {
-      name: "Scale",
-      volume: "3.000+ e-mails per maand",
-      price: "Vanaf €899 / maand",
-      valueHint: "Voor organisaties waar mailboxdruk direct capaciteit kost",
-      time: "Gemiddeld 15–25+ uur per week · 60–100+ uur per maand besparing",
-      description:
-        "Voor organisaties waar mailboxbeheer veel capaciteit kost en waar automatisering direct helpt om rust, overzicht en snelheid terug te brengen.",
-      points: [
-        "Sterke ontlasting van mailboxprocessen",
-        "Meer overzicht bij hoge volumes en uitzonderingen",
-        "Eigen dashboard voor controle en inzicht",
-        "Geschikt voor complexere mailbox workflows",
-      ],
-    },
-  ];
-
-  const comboPackages: PackageItem[] = [
-    {
-      name: "Starter",
-      volume: "Tot 150 facturen + tot 1.000 e-mails per maand",
-      price: "Vanaf €549 / maand",
-      valueHint: "Een sterke stap voor bedrijven die meerdere processen tegelijk willen ontlasten",
-      time: "Gemiddeld 8–14 uur per week · 32–56 uur per maand besparing",
-      description:
-        "Voor bedrijven die zowel facturatie als mailboxbeheer slimmer willen organiseren en direct merkbaar tijd willen terugwinnen in de dagelijkse operatie.",
-      points: [
-        "Facturatie en mailboxbeheer in één werkwijze",
-        "Minder losse administratie en minder handmatig werk",
-        "Snellere opvolging en meer structuur",
-        "Eigen dashboard voor mailbox automatisering",
-      ],
-    },
-    {
-      name: "Groei",
-      volume: "150 – 750 facturen + 1.000 – 3.000 e-mails per maand",
-      price: "Vanaf €899 / maand",
-      valueHint: "Ideaal wanneer meerdere terugkerende processen tegelijk beginnen te drukken",
-      time: "Gemiddeld 12–22 uur per week · 48–88 uur per maand besparing",
-      description:
-        "Voor groeiende bedrijven waar meerdere terugkerende processen tegelijk beginnen te drukken op tijd, overzicht en interne capaciteit.",
-      points: [
-        "Combinatie van facturatie- en mailbox automatisering",
-        "Meer procescontrole en minder foutgevoeligheid",
-        "Sterkere koppeling tussen administratie en communicatie",
-        "Geschikt voor bedrijven die willen opschalen zonder extra chaos",
-      ],
-    },
-    {
-      name: "Scale",
-      volume: "750+ facturen + 3.000+ e-mails per maand",
-      price: "Vanaf €1.349 / maand",
-      valueHint: "Voor bedrijven waar brede automatisering directe impact heeft op rust en winstgevendheid",
-      time: "Gemiddeld 20–35+ uur per week · 80–140+ uur per maand besparing",
-      description:
-        "Voor organisaties met grotere volumes en complexere workflows, waar brede automatisering directe impact heeft op rust, capaciteit en winstgevendheid.",
-      points: [
-        "Maximale tijdswinst op meerdere processen tegelijk",
-        "Geschikt voor hogere volumes en complexere uitzonderingen",
-        "Meer grip op opvolging, verwerking en dashboarding",
-        "Sterke premium oplossing voor bedrijven met structurele druk",
-      ],
-    },
-  ];
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -296,7 +142,7 @@ export default function JHGProcessSolutionsWebsite() {
                   href="#pakketten"
                   className="rounded-2xl border border-[#b7cae3] px-6 py-3 text-center text-sm font-medium text-[#21467f] transition hover:border-[#3f89cb] hover:text-[#3f89cb]"
                 >
-                  Bekijk pakketten
+                  Bekijk oplossingen
                 </a>
               </div>
 
@@ -304,19 +150,19 @@ export default function JHGProcessSolutionsWebsite() {
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
                   <div className="text-lg font-semibold text-[#21467f]">Facturatie</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Minder handmatige stappen, snellere verwerking en meer grip op terugkerende factuurstromen
+                    Minder handmatige stappen, snellere verwerking en meer grip
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
                   <div className="text-lg font-semibold text-[#21467f]">Mailbox</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Minder mailbox chaos, snellere opvolging en duidelijkere interne routing
+                    Minder chaos, snellere opvolging en duidelijkere routing
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
-                  <div className="text-lg font-semibold text-[#21467f]">Dashboard</div>
+                  <div className="text-lg font-semibold text-[#21467f]">Combinatie</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Inzicht en controle voor klanten die gebruikmaken van mailbox automatisering
+                    Facturatie en mailboxbeheer in één slimme werkwijze
                   </div>
                 </div>
               </div>
@@ -335,7 +181,7 @@ export default function JHGProcessSolutionsWebsite() {
                     "Facturen worden opgebouwd, gegenereerd en verzonden zonder onnodige handmatige tussenstappen",
                     "Mailbox berichten worden verwerkt, gecategoriseerd en klaargezet voor opvolging",
                     "Belangrijke informatie wordt bijgewerkt in gekoppelde systemen zoals Moneybird",
-                    "Klanten met mailbox automatisering werken vanuit een eigen dashboard voor meer overzicht en controle",
+                    "Klanten met mailbox automatisering werken vanuit een eigen dashboard",
                   ].map((step, index) => (
                     <div key={step} className="flex items-start gap-4 rounded-2xl bg-white/10 p-4">
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-sm font-semibold text-[#21467f]">
@@ -379,15 +225,13 @@ export default function JHGProcessSolutionsWebsite() {
                   Facturen worden automatisch opgebouwd op basis van aangeleverde gegevens
                   of binnenkomende informatie. Het systeem genereert de factuur, maakt
                   het document aan, verstuurt deze en verwerkt relevante gegevens direct
-                  door in de administratie. Zo verdwijnt een groot deel van het terugkerende
-                  handmatige werk uit het proces.
+                  door in de administratie.
                 </p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-700">
                   <li>• Automatische opbouw van factuurregels</li>
                   <li>• Genereren en verzenden zonder onnodige handmatige stappen</li>
                   <li>• Minder fouten en minder losse administratie</li>
                   <li>• Koppeling met Moneybird waar relevant</li>
-                  <li>• Geschikt voor bedrijven met terugkerend volume</li>
                 </ul>
               </div>
 
@@ -402,15 +246,13 @@ export default function JHGProcessSolutionsWebsite() {
                   Binnenkomende e-mails worden automatisch geanalyseerd en verwerkt.
                   Het systeem kan berichten categoriseren, prioriteren, doorsturen
                   en klaarzetten voor opvolging, zodat mailboxen overzichtelijk blijven
-                  en communicatie sneller wordt afgehandeld. Hierdoor ontstaat meer rust,
-                  minder vertraging en meer grip op wat aandacht nodig heeft.
+                  en communicatie sneller wordt afgehandeld.
                 </p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-700">
                   <li>• Automatische analyse van binnenkomende e-mails</li>
                   <li>• Herkennen van onderwerp, prioriteit en vervolgstappen</li>
                   <li>• Slim routeren naar de juiste plek binnen het proces</li>
                   <li>• Eigen dashboard voor mailbox automatisering</li>
-                  <li>• Minder mailbox chaos en snellere opvolging</li>
                 </ul>
               </div>
             </div>
@@ -470,217 +312,92 @@ export default function JHGProcessSolutionsWebsite() {
                 Pakketten
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Kies het traject dat past bij uw proces en groeifase.
+                Kies de oplossing die past bij uw proces en groeifase.
               </h2>
               <p className="mt-4 text-lg text-slate-200">
-                Klik op een oplossing om direct naar de bijbehorende pakketten en prijzen te gaan.
+                Bekijk per oplossing de bijbehorende pagina met uitleg, prijzen en verwachte tijdsbesparing.
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
-              <a
-                href="#facturatie-pakketten"
-                className="group overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-8 transition hover:-translate-y-1 hover:bg-white/15"
-              >
-                <div className="flex h-full flex-col justify-between gap-8">
-                  <div>
-                    <div className="text-sm uppercase tracking-[0.2em] text-[#b7cae3]">
-                      Oplossing 1
-                    </div>
-                    <h3 className="mt-3 text-3xl font-semibold text-white">
-                      Facturatie automatisering
-                    </h3>
-                    <p className="mt-4 max-w-md text-base leading-7 text-slate-200">
-                      Voor bedrijven die minder tijd willen verliezen aan terugkerende facturatie, verzending en verwerking.
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-white">Bekijk pakketten</span>
-                    <span className="text-2xl text-[#b7cae3] transition group-hover:translate-x-1">
-                      →
-                    </span>
-                  </div>
-                </div>
-              </a>
-
-              <a
-                href="#mailbox-pakketten"
-                className="group overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-8 transition hover:-translate-y-1 hover:bg-white/15"
-              >
-                <div className="flex h-full flex-col justify-between gap-8">
-                  <div>
-                    <div className="text-sm uppercase tracking-[0.2em] text-[#b7cae3]">
-                      Oplossing 2
-                    </div>
-                    <h3 className="mt-3 text-3xl font-semibold text-white">
-                      Mailbox automatisering
-                    </h3>
-                    <p className="mt-4 max-w-md text-base leading-7 text-slate-200">
-                      Voor bedrijven die mailbox chaos willen omzetten in overzicht, routing en snellere opvolging.
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-white">Bekijk pakketten</span>
-                    <span className="text-2xl text-[#b7cae3] transition group-hover:translate-x-1">
-                      →
-                    </span>
-                  </div>
-                </div>
-              </a>
-
-              <a
-                href="#combi-pakketten"
-                className="group overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-8 transition hover:-translate-y-1 hover:bg-white/15"
-              >
-                <div className="flex h-full flex-col justify-between gap-8">
-                  <div>
-                    <div className="text-sm uppercase tracking-[0.2em] text-[#b7cae3]">
-                      Oplossing 3
-                    </div>
-                    <h3 className="mt-3 text-3xl font-semibold text-white">
-                      Combinatiepakket
-                    </h3>
-                    <p className="mt-4 max-w-md text-base leading-7 text-slate-200">
-                      Voor bedrijven die facturatie en mailboxbeheer tegelijk structureel willen ontlasten.
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-white">Bekijk pakketten</span>
-                    <span className="text-2xl text-[#b7cae3] transition group-hover:translate-x-1">
-                      →
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section id="facturatie-pakketten" className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mb-10 max-w-4xl">
-              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-                Facturatie automatisering
-              </div>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-                Voor bedrijven die hun facturatieproces slimmer en sneller willen laten verlopen.
-              </h2>
-              <p className="mt-4 text-lg text-slate-600">
-                Gericht op minder handmatig werk, meer structuur en snellere verwerking van terugkerende factuurstromen.
-              </p>
-            </div>
-
-            <div className="grid gap-8 lg:grid-cols-3">
-              {invoicePackages.map((item) => (
-                <div
-                  key={item.name}
-                  className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm"
+            <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+              <div className="space-y-5">
+                <Link
+                  href="/pakketten/facturatie"
+                  className="group relative block overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#3f89cb,#21467f)] p-8 shadow-lg transition hover:-translate-y-1"
                 >
-                  <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
-                  <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
-                  <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                  <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
-                  <div className="mt-3 rounded-2xl bg-white px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
-                    {item.time}
+                  <div className="absolute inset-0 bg-black/10" />
+                  <div className="relative flex items-center justify-between gap-6">
+                    <div>
+                      <div className="text-3xl font-semibold text-white">Facturatie automatisering</div>
+                      <div className="mt-2 max-w-xl text-sm leading-7 text-slate-100">
+                        Minder handmatige verwerking, snellere facturatie en meer grip op terugkerende administratieve processen.
+                      </div>
+                    </div>
+                    <div className="shrink-0 text-right">
+                      <div className="text-sm font-medium text-white/90">Meer informatie</div>
+                      <div className="mt-2 text-3xl text-white transition group-hover:translate-x-1">→</div>
+                    </div>
                   </div>
+                </Link>
 
-                  <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-
-                  <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                    {item.points.map((point) => (
-                      <li key={point}>• {point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="mailbox-pakketten" className="bg-[#f4f7fb] py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mb-10 max-w-4xl">
-              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-                Mailbox automatisering
-              </div>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-                Voor bedrijven die mailbox chaos willen omzetten in overzicht en opvolging.
-              </h2>
-              <p className="mt-4 text-lg text-slate-600">
-                Gericht op snellere verwerking, minder zoekwerk en meer grip op berichten die opvolging nodig hebben.
-              </p>
-            </div>
-
-            <div className="grid gap-8 lg:grid-cols-3">
-              {mailboxPackages.map((item) => (
-                <div
-                  key={item.name}
-                  className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm"
+                <Link
+                  href="/pakketten/mailbox"
+                  className="group relative block overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#2e5f9f,#19365f)] p-8 shadow-lg transition hover:-translate-y-1"
                 >
-                  <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
-                  <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
-                  <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                  <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
-                  <div className="mt-3 rounded-2xl bg-[#f8fbff] px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
-                    {item.time}
+                  <div className="absolute inset-0 bg-black/10" />
+                  <div className="relative flex items-center justify-between gap-6">
+                    <div>
+                      <div className="text-3xl font-semibold text-white">Mailbox automatisering</div>
+                      <div className="mt-2 max-w-xl text-sm leading-7 text-slate-100">
+                        Minder mailbox chaos, snellere opvolging en meer overzicht op berichten die echt aandacht nodig hebben.
+                      </div>
+                    </div>
+                    <div className="shrink-0 text-right">
+                      <div className="text-sm font-medium text-white/90">Meer informatie</div>
+                      <div className="mt-2 text-3xl text-white transition group-hover:translate-x-1">→</div>
+                    </div>
                   </div>
+                </Link>
 
-                  <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-
-                  <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                    {item.points.map((point) => (
-                      <li key={point}>• {point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="combi-pakketten" className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mb-10 max-w-4xl">
-              <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#3f89cb]">
-                Combinatiepakket
-              </div>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#21467f] sm:text-4xl">
-                Voor bedrijven die zowel facturatie als mailboxbeheer structureel willen automatiseren.
-              </h2>
-              <p className="mt-4 text-lg text-slate-600">
-                Gericht op bedrijven die meerdere terugkerende processen tegelijk willen ontlasten en daar direct capaciteit mee willen terugwinnen.
-              </p>
-            </div>
-
-            <div className="grid gap-8 lg:grid-cols-3">
-              {comboPackages.map((item) => (
-                <div
-                  key={item.name}
-                  className="rounded-[2rem] border border-[#d9e4f2] bg-[#f8fbff] p-8 shadow-sm"
+                <Link
+                  href="/pakketten/combinatie"
+                  className="group relative block overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#547fba,#21467f)] p-8 shadow-lg transition hover:-translate-y-1"
                 >
-                  <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
-                  <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
-                  <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
-                  <div className="mt-1 text-xs text-slate-500">{item.valueHint}</div>
-                  <div className="mt-3 rounded-2xl bg-white px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
-                    {item.time}
+                  <div className="absolute inset-0 bg-black/10" />
+                  <div className="relative flex items-center justify-between gap-6">
+                    <div>
+                      <div className="text-3xl font-semibold text-white">Combinatiepakket</div>
+                      <div className="mt-2 max-w-xl text-sm leading-7 text-slate-100">
+                        Voor bedrijven die facturatie en mailboxbeheer tegelijk willen ontlasten en direct capaciteit willen terugwinnen.
+                      </div>
+                    </div>
+                    <div className="shrink-0 text-right">
+                      <div className="text-sm font-medium text-white/90">Meer informatie</div>
+                      <div className="mt-2 text-3xl text-white transition group-hover:translate-x-1">→</div>
+                    </div>
                   </div>
+                </Link>
+              </div>
 
-                  <p className="mt-5 min-h-[120px] text-sm leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-
-                  <ul className="mt-6 space-y-3 text-sm text-slate-700">
-                    {item.points.map((point) => (
-                      <li key={point}>• {point}</li>
-                    ))}
-                  </ul>
+              <div className="rounded-[2rem] border border-white/10 bg-white/10 p-8">
+                <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#b7cae3]">
+                  Wat u hier vindt
                 </div>
-              ))}
+                <h3 className="mt-3 text-3xl font-semibold text-white">
+                  Bekijk per traject wat het oplevert.
+                </h3>
+                <p className="mt-4 text-base leading-8 text-slate-200">
+                  Op iedere pagina ziet u welke pakketten beschikbaar zijn, vanaf welke maandprijs
+                  ze starten, hoeveel tijd ze gemiddeld kunnen besparen en voor welk type bedrijf
+                  ze het best passen.
+                </p>
+                <a
+                  href="#afspraak"
+                  className="mt-8 inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-medium text-[#21467f] transition hover:bg-[#eaf1fa]"
+                >
+                  Vrijblijvend kennismaken
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -707,8 +424,7 @@ export default function JHGProcessSolutionsWebsite() {
                 <p className="mt-4 leading-8">
                   Wij richten ons op processen waar wekelijks ongemerkt veel tijd in
                   verdwijnt: facturen opbouwen, gegevens verwerken, mailboxen bijhouden,
-                  opvolging bewaken en uitzonderingen handmatig oplossen. Juist daar
-                  ontstaat vaak de grootste winst in rust, overzicht en capaciteit.
+                  opvolging bewaken en uitzonderingen handmatig oplossen.
                 </p>
                 <p className="mt-4 leading-8">
                   Voor facturatie kunnen we waar relevant koppelen met Moneybird. Voor
