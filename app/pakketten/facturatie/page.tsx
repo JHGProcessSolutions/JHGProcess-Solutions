@@ -81,7 +81,12 @@ export default function FacturatiePage() {
               <div key={item.name} className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
                 <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
                 <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
-                <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
+
+                <div className="mt-4">
+                  <div className="text-3xl font-semibold text-[#21467f]">{item.price}</div>
+                  <div className="mt-1 text-xs text-slate-500">excl. btw</div>
+                </div>
+
                 <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
                   {item.time}
                 </div>

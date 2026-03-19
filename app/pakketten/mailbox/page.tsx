@@ -11,7 +11,7 @@ const packages = [
     points: [
       "Automatische analyse van binnenkomende e-mails",
       "Slim routeren en klaarzetten voor opvolging",
-      "Minder mailbox chaos en minder sorteerwerk",
+      "Voorgestelde antwoorden op basis van inhoud en context",
       "Eigen dashboard voor mailbox automatisering",
     ],
   },
@@ -25,7 +25,7 @@ const packages = [
     points: [
       "Herkennen van onderwerpen, prioriteit en vervolgstappen",
       "Snellere verwerking van grotere volumes",
-      "Meer grip op opvolging en interne routing",
+      "Automatisch voorgestelde en verzendbare antwoorden waar passend",
       "Geschikt voor teams met terugkerende mailboxdruk",
     ],
   },
@@ -39,8 +39,8 @@ const packages = [
     points: [
       "Sterke ontlasting van mailboxprocessen",
       "Meer overzicht bij hoge volumes en uitzonderingen",
+      "Slimme verwerking en opvolging zonder standaardmatige mailboxafhandeling",
       "Eigen dashboard voor controle en inzicht",
-      "Geschikt voor complexere mailbox workflows",
     ],
   },
 ];
@@ -81,7 +81,12 @@ export default function MailboxPage() {
               <div key={item.name} className="rounded-[2rem] border border-[#d9e4f2] bg-white p-8 shadow-sm">
                 <div className="text-lg font-semibold text-[#21467f]">{item.name}</div>
                 <div className="mt-2 text-sm font-medium text-slate-600">{item.volume}</div>
-                <div className="mt-4 text-3xl font-semibold text-[#21467f]">{item.price}</div>
+
+                <div className="mt-4">
+                  <div className="text-3xl font-semibold text-[#21467f]">{item.price}</div>
+                  <div className="mt-1 text-xs text-slate-500">excl. btw</div>
+                </div>
+
                 <div className="mt-3 rounded-2xl bg-[#f4f7fb] px-4 py-3 text-sm text-[#21467f] border border-[#d9e4f2]">
                   {item.time}
                 </div>

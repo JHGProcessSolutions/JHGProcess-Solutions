@@ -156,7 +156,7 @@ export default function JHGProcessSolutionsWebsite() {
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
                   <div className="text-lg font-semibold text-[#21467f]">Mailbox</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Minder mailbox chaos, snellere opvolging en duidelijkere interne routing
+                    Slimme verwerking, voorgestelde antwoorden en snellere opvolging
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
@@ -181,7 +181,7 @@ export default function JHGProcessSolutionsWebsite() {
                     "Facturen worden automatisch opgebouwd, inclusief klantgegevens, regels en bedragen",
                     "Facturen en herinneringen worden automatisch verzonden zonder handmatige acties",
                     "Binnenkomende klantmails worden geanalyseerd, gesorteerd en voorbereid voor opvolging",
-                    "Belangrijke informatie wordt direct verwerkt in gekoppelde systemen zoals Moneybird",
+                    "Antwoorden kunnen automatisch worden voorgesteld en verzonden op basis van de inhoud en context",
                     "Via een eigen dashboard blijft altijd zichtbaar wat er gebeurt en waar actie nodig is",
                   ].map((step, index) => (
                     <div
@@ -250,15 +250,15 @@ export default function JHGProcessSolutionsWebsite() {
                 </h3>
                 <p className="mt-4 text-slate-600">
                   Binnenkomende e-mails worden automatisch geanalyseerd en verwerkt.
-                  Het systeem kan berichten categoriseren, prioriteren, doorsturen
-                  en klaarzetten voor opvolging, zodat mailboxen overzichtelijk blijven
-                  en communicatie sneller wordt afgehandeld. Hierdoor ontstaat meer rust,
-                  minder vertraging en meer grip op wat aandacht nodig heeft.
+                  Het systeem herkent de context van berichten, bepaalt wat ermee moet
+                  gebeuren en kan slimme antwoorden voorstellen of direct versturen.
+                  Zo ontstaat er minder mailbox chaos, minder vertraging en meer grip
+                  op wat echt aandacht nodig heeft.
                 </p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-700">
                   <li>• Automatische analyse van binnenkomende e-mails</li>
                   <li>• Herkennen van onderwerp, prioriteit en vervolgstappen</li>
-                  <li>• Slim routeren naar de juiste plek binnen het proces</li>
+                  <li>• Antwoorden automatisch voorstellen en versturen waar passend</li>
                   <li>• Eigen dashboard voor mailbox automatisering</li>
                   <li>• Minder mailbox chaos en snellere opvolging</li>
                 </ul>
@@ -357,7 +357,7 @@ export default function JHGProcessSolutionsWebsite() {
                     <div>
                       <div className="text-3xl font-semibold text-white">Mailbox automatisering</div>
                       <div className="mt-2 max-w-xl text-sm leading-7 text-slate-100">
-                        Minder mailbox chaos, snellere opvolging en meer overzicht op berichten die echt aandacht nodig hebben.
+                        Slimme verwerking van inkomende e-mails, voorgestelde antwoorden en snellere opvolging zonder standaardmatige mailbox chaos.
                       </div>
                     </div>
                     <div className="shrink-0 text-right">
