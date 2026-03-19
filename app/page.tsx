@@ -142,7 +142,7 @@ export default function JHGProcessSolutionsWebsite() {
                   href="#pakketten"
                   className="rounded-2xl border border-[#b7cae3] px-6 py-3 text-center text-sm font-medium text-[#21467f] transition hover:border-[#3f89cb] hover:text-[#3f89cb]"
                 >
-                  Bekijk oplossingen
+                  Bekijk onze oplossingen
                 </a>
               </div>
 
@@ -150,19 +150,19 @@ export default function JHGProcessSolutionsWebsite() {
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
                   <div className="text-lg font-semibold text-[#21467f]">Facturatie</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Minder handmatige stappen, snellere verwerking en meer grip
+                    Minder handmatige stappen, snellere verwerking en meer grip op terugkerende factuurstromen
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
                   <div className="text-lg font-semibold text-[#21467f]">Mailbox</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Minder chaos, snellere opvolging en duidelijkere routing
+                    Minder mailbox chaos, snellere opvolging en duidelijkere interne routing
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d9e4f2] bg-white p-4 shadow-sm">
-                  <div className="text-lg font-semibold text-[#21467f]">Combinatie</div>
+                  <div className="text-lg font-semibold text-[#21467f]">Dashboard</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    Facturatie en mailboxbeheer in één slimme werkwijze
+                    Inzicht en controle voor klanten die gebruikmaken van mailbox automatisering
                   </div>
                 </div>
               </div>
@@ -176,14 +176,18 @@ export default function JHGProcessSolutionsWebsite() {
 
                 <div className="mt-6 space-y-4">
                   {[
-                    "Gegevens komen binnen via formulier, systeem of e-mail",
-                    "Het systeem beoordeelt automatisch de inhoud en bepaalt de juiste vervolgactie",
-                    "Facturen worden opgebouwd, gegenereerd en verzonden zonder onnodige handmatige tussenstappen",
-                    "Mailbox berichten worden verwerkt, gecategoriseerd en klaargezet voor opvolging",
-                    "Belangrijke informatie wordt bijgewerkt in gekoppelde systemen zoals Moneybird",
-                    "Klanten met mailbox automatisering werken vanuit een eigen dashboard",
+                    "Informatie komt automatisch binnen via formulieren, e-mail of bestaande systemen",
+                    "Het systeem analyseert automatisch wat er binnenkomt en bepaalt direct de juiste vervolgactie",
+                    "Facturen worden automatisch opgebouwd, inclusief klantgegevens, regels en bedragen",
+                    "Facturen en herinneringen worden automatisch verzonden zonder handmatige acties",
+                    "Binnenkomende klantmails worden geanalyseerd, gesorteerd en voorbereid voor opvolging",
+                    "Belangrijke informatie wordt direct verwerkt in gekoppelde systemen zoals Moneybird",
+                    "Via een eigen dashboard blijft altijd zichtbaar wat er gebeurt en waar actie nodig is",
                   ].map((step, index) => (
-                    <div key={step} className="flex items-start gap-4 rounded-2xl bg-white/10 p-4">
+                    <div
+                      key={step}
+                      className="flex items-start gap-4 rounded-2xl bg-white/10 p-4"
+                    >
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-sm font-semibold text-[#21467f]">
                         {index + 1}
                       </div>
@@ -225,13 +229,15 @@ export default function JHGProcessSolutionsWebsite() {
                   Facturen worden automatisch opgebouwd op basis van aangeleverde gegevens
                   of binnenkomende informatie. Het systeem genereert de factuur, maakt
                   het document aan, verstuurt deze en verwerkt relevante gegevens direct
-                  door in de administratie.
+                  door in de administratie. Zo verdwijnt een groot deel van het terugkerende
+                  handmatige werk uit het proces.
                 </p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-700">
                   <li>• Automatische opbouw van factuurregels</li>
                   <li>• Genereren en verzenden zonder onnodige handmatige stappen</li>
                   <li>• Minder fouten en minder losse administratie</li>
                   <li>• Koppeling met Moneybird waar relevant</li>
+                  <li>• Geschikt voor bedrijven met terugkerend volume</li>
                 </ul>
               </div>
 
@@ -246,13 +252,15 @@ export default function JHGProcessSolutionsWebsite() {
                   Binnenkomende e-mails worden automatisch geanalyseerd en verwerkt.
                   Het systeem kan berichten categoriseren, prioriteren, doorsturen
                   en klaarzetten voor opvolging, zodat mailboxen overzichtelijk blijven
-                  en communicatie sneller wordt afgehandeld.
+                  en communicatie sneller wordt afgehandeld. Hierdoor ontstaat meer rust,
+                  minder vertraging en meer grip op wat aandacht nodig heeft.
                 </p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-700">
                   <li>• Automatische analyse van binnenkomende e-mails</li>
                   <li>• Herkennen van onderwerp, prioriteit en vervolgstappen</li>
                   <li>• Slim routeren naar de juiste plek binnen het proces</li>
                   <li>• Eigen dashboard voor mailbox automatisering</li>
+                  <li>• Minder mailbox chaos en snellere opvolging</li>
                 </ul>
               </div>
             </div>
